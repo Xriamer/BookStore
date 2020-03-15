@@ -85,7 +85,21 @@ CONSTRAINT   pk_odid      PRIMARY KEY(odid),
 CONSTRAINT   fk_oid       FOREIGN KEY(oid) REFERENCES orders(oid) ON DELETE CASCADE,
 CONSTRAINT   fk_bid       FOREIGN KEY(bid) REFERENCES books(bid) ON DELETE SET NULL
 )type=innodb;
-
+--编写测试数据
+--增加商品分类信息
+INSERT INTO item(title) VALUES('文学小说');
+INSERT INTO item(title) VALUES('童书');
+INSERT INTO item(title) VALUES('教育考试');
+INSERT INTO item(title) VALUES('人文社科');
+INSERT INTO item(title) VALUES('经管励志');
+INSERT INTO item(title) VALUES('艺术');
+INSERT INTO item(title) VALUES('IT科技');
+INSERT INTO item(title) VALUES('文娱');
+INSERT INTO item(title) VALUES('教育培训');
+INSERT INTO item(title) VALUES('生活');
+INSERT INTO item(title) VALUES('电子书');
+--增加管理员信息
+INSERT INTO admin(aid,password) VALUES('admin');
 
 
 
