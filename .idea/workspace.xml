@@ -2,56 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dbc/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/c.tld" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/WdatePicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/lang/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/lang/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/WdatePicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/blueFresh/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/blueFresh/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/blueFresh/img.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/datePicker.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/default/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/default/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/default/img.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/green/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/green/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/green/img.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/whyGreen/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/whyGreen/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/whyGreen/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/skin/whyGreen/img.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/lang/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/lang/zh-tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/WdatePicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/datePicker.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/default/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/default/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/default/img.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/whyGreen/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/whyGreen/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/whyGreen/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/开发包/skin/whyGreen/img.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/others.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_bar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_bars.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_search.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/books/nophoto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/upload/members/nophoto.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/utils/filter/EncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/errors.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/forward.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/others.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/others.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -133,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584274690340</updated>
       <workItem from="1584274692559" duration="12661000" />
-      <workItem from="1584330199023" duration="15862000" />
+      <workItem from="1584330199023" duration="18662000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -149,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584287653024</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create template file and import jar file">
+      <created>1584356039418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584356039418</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,17 +122,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add MD5 Util Class" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="create template file and import jar file" />
+    <option name="LAST_COMMIT_MESSAGE" value="create template file and import jar file" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1584358197174">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584358197174" />
     <state x="627" y="128" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1584331337684">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="627" y="128" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.834@0.0.1536.834" timestamp="1584331337684" />
-    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584287651724">
+    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584356037793">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584287651724" />
+    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584356037793" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584331332839">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -198,10 +166,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584332014027" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584287654607">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584356043324">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584287654607" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584356043324" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584330286085">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
