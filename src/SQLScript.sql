@@ -17,14 +17,14 @@ CREATE TABLE item(
 iid          INT   AUTO_INCREMENT,
 title        VARCHAR(200)  NOT NULL,
 CONSTRAINT pk_iid PRIMARY KEY(iid)
-)type=innodb;
+) engine=innodb;
 --2.创建管理员信息表
 CREATE TABLE admin(
 aid         VARCHAR(50),
 password    VARCHAR(32) NOT NULL,
 lastdate    DATETIME,
 CONSTRAINT pk_aid PRIMARY KEY(aid)
-)type=innodb;
+) engine=innodb;
 --3.创建用户信息表
 CREATE TABLE member(
 mid         VARCHAR(50),
@@ -33,10 +33,11 @@ name        VARCHAR(50),
 phone       VARCHAR(50),
 address     VARCHAR(100),
 code        VARCHAR(100),
+status      INT,
 regdate     DATETIME     NOT NULL,
 photo       VARCHAR(50)  DEFAULT 'nophoto.jpg',
 CONSTRAINT  pk_mid       PRIMARY KEY(mid)
-)type=innodb;
+) engine=innodb;
 --4.创建图书信息表
 --主键是能确定一条记录的唯一标识，比如，一条记录包括身份正号，姓名，年龄。
 --身份证号是唯一能确定你这个人的，其他都可能有重复，所以，身份证号是主键。
@@ -60,7 +61,7 @@ status      INT,
 CONSTRAINT  pk_bid     PRIMARY KEY(bid),
 CONSTRAINT  fk_iid     FOREIGN KEY(iid) REFERENCES item(iid) ON DELETE SET NULL,
 CONSTRAINT  fk_aid     FOREIGN KEY(aid) REFERENCES admin(aid) ON DELETE SET NULL
-)type=innodb;
+) engine=innodb;
 --5.创建订单信息表
 CREATE TABLE orders(
 oid         INT        AUTO_INCREMENT,
@@ -70,9 +71,9 @@ phone       VARCHAR(50),
 address     VARCHAR(100),
 credate     DATETIME,
 pay         FLOAT,
-CONSTRAINT  pk_oid     FOREIGN KEY(oid),
-CONSTRAINT  fk_mid     FOREIGN KEY(mid) REFERENCES member(mid) ON DELETE CASCADE,
-)type=innodb;
+CONSTRAINT  pk_oid     PRIMARY KEY(oid),
+CONSTRAINT  fk_mid     FOREIGN KEY(mid) REFERENCES member(mid) ON DELETE CASCADE
+) engine=innodb;
 --6.创建订单详情表
 CREATE TABLE details(
 odid         INT          AUTO_INCREMENT,
@@ -84,7 +85,7 @@ amount       INT          NOT NULL,
 CONSTRAINT   pk_odid      PRIMARY KEY(odid),
 CONSTRAINT   fk_oid       FOREIGN KEY(oid) REFERENCES orders(oid) ON DELETE CASCADE,
 CONSTRAINT   fk_bid       FOREIGN KEY(bid) REFERENCES books(bid) ON DELETE SET NULL
-)type=innodb;
+) engine=innodb;
 --编写测试数据
 --增加商品分类信息
 INSERT INTO item(title) VALUES('文学小说');

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/utils/filter/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/errors.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/forward.jsp" afterDir="false" />
+    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="create template file and import jar file">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IMemberDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/front/IMemberServiceFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/utils/dao/AbstractDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/others.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/others.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SQLScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQLScript.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dbc/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dbc/DatabaseConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,7 +56,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -89,7 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1584274690340</updated>
       <workItem from="1584274692559" duration="12661000" />
-      <workItem from="1584330199023" duration="18662000" />
+      <workItem from="1584330199023" duration="22759000" />
+      <workItem from="1584363094630" duration="9581000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -112,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584356039418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create template file and import jar file">
+      <created>1584358786271</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584358786271</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,18 +141,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="create template file and import jar file" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1584358197174">
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1584372790831">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584358197174" />
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584372790831" />
     <state x="627" y="128" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1584331337684">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="627" y="128" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.834@0.0.1536.834" timestamp="1584331337684" />
-    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584356037793">
+    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584362965871">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584356037793" />
+    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584362965871" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584331332839">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -162,25 +177,29 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584287743685" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1584332014027">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1584362434090">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584332014027" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584356043324">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584362434090" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584358791226">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584356043324" />
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584330286085">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584358791226" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584363094417">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584330286085" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584363094417" />
     <state x="578" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584285116566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="578" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1584285116566" />
-    <state x="431" y="155" key="search.everywhere.popup" timestamp="1584284303845">
+    <state x="425" y="189" key="run.anything.popup" timestamp="1584363939587">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1584284303845" />
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1584363939587" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1584362862359">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1584362862359" />
   </component>
 </project>
