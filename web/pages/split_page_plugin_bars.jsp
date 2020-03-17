@@ -1,5 +1,5 @@
 <%@ page pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="mldn.css">
+<link rel="stylesheet" type="text/css" href="base.css">
 <%--
 <div id="splitBarDiv" style="float:right">
 	<jsp:include page="/pages/split_page_plugin_bars.jsp"/>

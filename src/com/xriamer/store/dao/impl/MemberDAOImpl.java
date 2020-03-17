@@ -15,10 +15,10 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
         super(conn);
     }
 
-    @Override
-    public Member findByMid(String mid) throws Exception {
-        return null;
-    }
+//    @Override
+//    public Member findByMid(String mid) throws Exception {
+//        return null;
+//    }
 
     @Override
     public boolean doCreate(Member mb) throws Exception {

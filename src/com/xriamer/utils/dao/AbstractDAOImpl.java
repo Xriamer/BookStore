@@ -47,7 +47,7 @@ public abstract class AbstractDAOImpl {
      * @return 返回指定表的数据量，如果表没有数据，返回0
      * @throws Exception
      */
-    public Integer countHandle(String column, String keyWord, String table) throws Exception {
+    public Integer countHandle(String table, String column, String keyWord) throws Exception {
         StringBuffer sql = new StringBuffer();
         sql.append("SELECT COUNT(*) FROM").append(table).append(" WHERE ").append(column).append(" LIKE ?");
         this.pstmt = this.conn.prepareStatement(sql.toString());

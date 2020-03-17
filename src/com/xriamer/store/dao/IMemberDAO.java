@@ -11,6 +11,6 @@ public interface IMemberDAO extends IDAO<String, Member>{
      * @return
      * @throws Exception
      */
-    public Member findByMid(String mid) throws Exception;
+   //public Member findByMid(String mid) throws Exception;
 
 }

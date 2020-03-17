@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ page pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://www.xriamer.cn/c" %>
+<%@ taglib prefix="c" uri="http://www.mldn.cn/c" %>
 <%
     String path=request.getContextPath();
     String basePath=request.getScheme()+"://"

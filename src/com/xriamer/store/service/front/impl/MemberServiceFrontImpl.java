@@ -10,7 +10,7 @@ public class MemberServiceFrontImpl implements IMemberServiceFront {
     @Override
     public boolean regist(Member mb) throws Exception {
         try {
-            if(DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findByMid(mb.getMid())==null){
+            if(DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findById(mb.getMid())==null){
                 return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doCreate(mb);
             }
             return false;
