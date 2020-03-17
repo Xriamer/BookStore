@@ -8,77 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/c.tld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/SQLScript.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/servlet/front/Back.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/servlet/front/MemberServletFront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/dao/IDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/dao/IMemberDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/dao/impl/MemberDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/dbc/DatabaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/factory/DAOFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/factory/ServiceFrontDactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/service/front/IMemberServiceFront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/store/vo/Member.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/test/TestMD5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/utils/BasePath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/utils/MD5Code.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/utils/dao/AbstractDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/utils/filter/EncodingFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/classes/com/xriamer/utils/validate/ValidateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/images/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/WdatePicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/lang/zh-tw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/WdatePicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/blueFresh/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/blueFresh/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/blueFresh/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/datePicker.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/default/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/default/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/default/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/green/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/green/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/green/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/whyGreen/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/whyGreen/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/whyGreen/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/skin/whyGreen/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/lang/zh-tw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/WdatePicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/datePicker.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/default/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/default/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/default/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/whyGreen/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/whyGreen/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/whyGreen/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/js/开发包/skin/whyGreen/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/errors.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/forward.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/member_insert.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/member_regist.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/others.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/split_page_plugin_bar.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/split_page_plugin_bars.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/pages/split_page_plugin_search.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/upload/books/nophoto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore/upload/members/nophoto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +281,7 @@
       <workItem from="1584456578750" duration="2438000" />
       <workItem from="1584459044585" duration="382000" />
       <workItem from="1584459820597" duration="6621000" />
-      <workItem from="1584466558608" duration="263000" />
+      <workItem from="1584466558608" duration="543000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -465,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584466641054</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="endless bugs">
+      <created>1584466857335</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1584466857335</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,10 +459,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584466639070">
+    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584466856023">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584466639070" />
+    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584466856023" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -534,54 +471,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="159" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584465769352" />
-    <state width="1096" height="130" key="GridCell.Tab.0.bottom" timestamp="1584466830965">
+    <state width="1096" height="130" key="GridCell.Tab.0.bottom" timestamp="1584467118096">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584466830965" />
-    <state width="1096" height="130" key="GridCell.Tab.0.center" timestamp="1584466830965">
+    <state width="1096" height="130" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584467118096" />
+    <state width="1096" height="130" key="GridCell.Tab.0.center" timestamp="1584467118096">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584466830965" />
-    <state width="1096" height="130" key="GridCell.Tab.0.left" timestamp="1584466830965">
+    <state width="1096" height="130" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584467118096" />
+    <state width="1096" height="130" key="GridCell.Tab.0.left" timestamp="1584467118095">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584466830965" />
-    <state width="1096" height="130" key="GridCell.Tab.0.right" timestamp="1584466830965">
+    <state width="1096" height="130" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584467118095" />
+    <state width="1096" height="130" key="GridCell.Tab.0.right" timestamp="1584467118096">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584466830965" />
-    <state width="1096" height="130" key="GridCell.Tab.1.bottom" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584467118096" />
+    <state width="1096" height="130" key="GridCell.Tab.1.bottom" timestamp="1584467117912">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.1.center" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584467117912" />
+    <state width="1096" height="130" key="GridCell.Tab.1.center" timestamp="1584467117911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.1.left" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584467117911" />
+    <state width="1096" height="130" key="GridCell.Tab.1.left" timestamp="1584467117911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.1.right" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584467117911" />
+    <state width="1096" height="130" key="GridCell.Tab.1.right" timestamp="1584467117911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.2.bottom" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584467117911" />
+    <state width="1096" height="130" key="GridCell.Tab.2.bottom" timestamp="1584467117912">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.2.center" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584467117912" />
+    <state width="1096" height="130" key="GridCell.Tab.2.center" timestamp="1584467117912">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.2.left" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584467117912" />
+    <state width="1096" height="130" key="GridCell.Tab.2.left" timestamp="1584467117912">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
-    <state width="1096" height="130" key="GridCell.Tab.2.right" timestamp="1584466830764">
+    <state width="1096" height="130" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584467117912" />
+    <state width="1096" height="130" key="GridCell.Tab.2.right" timestamp="1584467117912">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="130" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584466830764" />
+    <state width="1096" height="130" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584467117912" />
     <state width="1257" height="261" key="GridCell.Tab.3.bottom" timestamp="1584448337489">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -602,10 +539,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584465775405" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584466645648">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584466863773">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584466645648" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584466863773" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584466630992">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
