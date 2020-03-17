@@ -14,6 +14,7 @@
       <change afterPath="$PROJECT_DIR$/web/pages/member_insert.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/pages/member_regist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/BookStore_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BookStore_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dao/IMemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IMemberDAO.java" afterDir="false" />
@@ -23,6 +24,10 @@
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/filter/EncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/errors.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/errors.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/forward.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/forward.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/others.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/others.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/split_page_plugin_bars.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_bars.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +271,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -292,7 +297,7 @@
       <workItem from="1584412897220" duration="9654000" />
       <workItem from="1584433405171" duration="14226000" />
       <workItem from="1584452608398" duration="3598000" />
-      <workItem from="1584456578750" duration="1885000" />
+      <workItem from="1584456578750" duration="2184000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -336,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584427566463</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="endless bugs">
+      <created>1584458777157</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584458777157</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +361,8 @@
     <MESSAGE value="create template file and import jar file" />
     <MESSAGE value="confirm register function &amp; add status field of table member" />
     <MESSAGE value="complete user regist servlet logic code." />
-    <option name="LAST_COMMIT_MESSAGE" value="complete user regist servlet logic code." />
+    <MESSAGE value="endless bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="endless bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="75" key="#Chrome_Settings" timestamp="1584446791465">
@@ -388,10 +401,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="627" y="128" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.834@0.0.1536.834" timestamp="1584331337684" />
-    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584427565111">
+    <state x="393" y="10" key="CommitChangelistDialog2" timestamp="1584458775872">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584427565111" />
+    <state x="393" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584458775872" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -468,10 +481,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584458481611" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584427569529">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584458780444">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584427569529" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584458780444" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584433465727">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
