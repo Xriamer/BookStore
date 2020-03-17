@@ -9,7 +9,7 @@
 %>
 <html>
 <head>
-    <base href="<%=basePath%>>">
+    <base href="<%=basePath%>">
     <title>网上书城</title>
     <link type="text/css" rel="stylesheet" href="css/base.css">
     <script type="text/javascript" src="js/base.js"></script>
