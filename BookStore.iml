@@ -32,15 +32,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jar_lib/jstl-impl-1.2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/../jar_lib/mysql-connector-java-5.0.4-bin.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -51,6 +42,24 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../jar_lib/SmartUpload.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/apache-tomcat-9.0.33/lib/jsp-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jar_lib/jstl-impl-1.2.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

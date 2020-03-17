@@ -5,7 +5,7 @@
          version="4.0">
     <jsp-config>
         <taglib>
-            <taglib-uri>http://www.mldn.cn/c</taglib-uri>
+            <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
             <taglib-location>/WEB-INF/c.tld</taglib-location>
         </taglib>
     </jsp-config>
