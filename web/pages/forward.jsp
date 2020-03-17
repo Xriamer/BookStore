@@ -9,11 +9,9 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://www.mldn.cn/c"%>
 <%
-    String path=request.getContextPath();
-    String basePath=request.getScheme()+"://"
-            + request.getServerName()+":"
-            + request.getServerName()+":"+
-            + request.getServerPort()
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
             + path ;
 %>
 <html>
