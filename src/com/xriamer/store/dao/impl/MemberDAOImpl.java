@@ -21,14 +21,15 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
     }
 
     @Override
-    public boolean doCreate(Member vo) throws Exception {
-        String sql="INSERT INTO member(mid,password,regdate,status) VALUES (?,?,?,?,?)";
+    public boolean doCreate(Member mb) throws Exception {
+        String sql="INSERT INTO member(mid,password,regdate,status,photo) VALUES (?,?,?,?,?,?)";
         super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,vo.getMid());
-        super.pstmt.setString(2,vo.getPassword());
-        super.pstmt.setString(3,vo.getCode());
-        super.pstmt.setTimestamp(4,new Timestamp(vo.getRegdate().getTime()));
-        super.pstmt.setInt(5,vo.getStatus());
+        super.pstmt.setString(1,mb.getMid());
+        super.pstmt.setString(2,mb.getPassword());
+        super.pstmt.setString(3,mb.getCode());
+        super.pstmt.setTimestamp(4,new Timestamp(mb.getRegdate().getTime()));
+        super.pstmt.setInt(5,mb.getStatus());
+        super.pstmt.setString(6,mb.getPhoto());
         return super.pstmt.executeUpdate()>0;
     }
 
