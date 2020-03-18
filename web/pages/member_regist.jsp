@@ -1,12 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@ page pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 <%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
-    String registUrl=basePath+"/pages/MemberServletFront/regist";
+    String registUrl = basePath + "/pages/MemberServletFront/regist";
 %>
 <html>
 <head>
@@ -25,12 +25,12 @@
                 <td colspan="3">用户注册</td>
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                <td width="15%">用户ID: </td>
+                <td width="15%">用户ID:</td>
                 <td width="40%"><input type="text" name="mid" id="mid" class="init" onblur="validateMid()"></td>
                 <td width="45%"><span id="midMsg"></span></td>
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                <td>密&nbsp;&nbsp;码 </td>
+                <td>密&nbsp;&nbsp;码</td>
                 <td><input type="password" name="password" id="password" class="init" onblur="validatePassword()"></td>
                 <td><span id="passwordMsg"></span></td>
             </tr>
@@ -40,11 +40,8 @@
                     <input type="reset" value="重置">
                 </td>
             </tr>
-            <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                <td colspan="3">用户注册</td>
-            </tr>
         </table>
-        </form>
+    </form>
 </div>
 <jsp:include page="/pages/footer.jsp"/>
 </body>

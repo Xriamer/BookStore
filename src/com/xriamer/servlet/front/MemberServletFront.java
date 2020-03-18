@@ -20,7 +20,7 @@ public class MemberServletFront extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path="/pages/errors.jsp";
-        request.getRequestDispatcher(path).forward(request,response);
+        //request.getRequestDispatcher(path).forward(request,response);
         String status=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/")+1);
         if(status!=null){
             if("regist".equals(status)){

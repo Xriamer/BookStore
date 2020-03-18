@@ -78,4 +78,29 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
     public Integer getAllCount(String column, String keyWord) throws Exception {
         return null;
     }
+
+    @Override
+    public boolean findByCode(String mid, String code) throws Exception {
+        String sql="SELECT COUNT(*) FROM member WHERE mid=? AND code=? AND status=2";
+        super.pstmt=super.conn.prepareStatement(sql);
+        super.pstmt.setString(1,mid);
+        super.pstmt.setString(2,code);
+        ResultSet rs=super.pstmt.executeQuery();
+        if(rs.next()){
+            if(rs.getInt(1)>0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean doUpdateStatus(String mid, Integer status) throws Exception {
+        String sql="UPDATE member SET status=? WHERE mid=?";
+        super.pstmt=super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1,status);
+        super.pstmt.setString(2,mid);
+        return super.pstmt.executeUpdate()>0;
+    }
 }
