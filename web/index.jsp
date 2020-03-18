@@ -17,6 +17,7 @@
 <body>
 <jsp:include page="/pages/header.jsp"/>
 <div id="mainDiv">
+  首页信息
 </div>
 <jsp:include page="/pages/footer.jsp"/>
 </body>

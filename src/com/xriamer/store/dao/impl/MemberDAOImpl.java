@@ -22,7 +22,7 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public boolean doCreate(Member mb) throws Exception {
-        String sql="INSERT INTO member(mid,password,regdate,status,photo) VALUES (?,?,?,?,?,?)";
+        String sql="INSERT INTO member(mid,password,code,regdate,status,photo) VALUES (?,?,?,?,?,?)";
         super.pstmt=super.conn.prepareStatement(sql);
         super.pstmt.setString(1,mb.getMid());
         super.pstmt.setString(2,mb.getPassword());
@@ -46,7 +46,7 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
     @Override
     public Member findById(String id) throws Exception {
         Member mb=null;
-        String sql="SELECT mid,name,phone,password,address,code,status,regdate,photo FROM member WHERE mid =?";
+        String sql="SELECT mid,password,name,phone,address,code,status,regdate,photo FROM member WHERE mid =?";
         super.pstmt=super.conn.prepareStatement(sql);
         super.pstmt.setString(1,id);
         ResultSet rs=super.pstmt.executeQuery();

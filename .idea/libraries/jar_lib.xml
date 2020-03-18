@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="jar_lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar_lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar_lib/mysql-connector-java-5.1.46-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar_lib/mysql-connector-java-5.1.46.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar_lib/SmartUpload.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar_lib/jstl-impl-1.2.2.jar!/" />
+      <root url="file://$PROJECT_DIR$/../jar_lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../jar_lib" recursive="false" />
+  </library>
+</component>
