@@ -29,4 +29,13 @@ public interface IMemberDAO extends IDAO<String, Member>{
      * @throws Exception
      */
     public boolean doUpdateStatus(String mid,Integer status)throws Exception;
+
+    /**
+     * 用户的登录检查操作，正常登录后可以查询出用户的照片信息，
+     * 由于参数接收的是Member对象，所以可以直接将照片信息保存在Member对象
+     * @param mb  包含了mid与password的VO类对象
+     * @return    登录成功返回true 否则返回false
+     * @throws Exception
+     */
+    public boolean findLogin(Member mb) throws Exception;
 }

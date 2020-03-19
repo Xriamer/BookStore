@@ -14,5 +14,10 @@
     <link type="text/css" rel="stylesheet" href="css/base.css">
     <script type="text/javascript" src="js/base.js"></script>
 </head>
-<body></body>
+<body>
+<jsp:include page="/pages/header.jsp"/>
+<div id="mainDiv">
+</div>
+<jsp:include page="/pages/footer.jsp"/>
+</body>
 </html>

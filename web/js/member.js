@@ -7,3 +7,6 @@ function validatePassword() {
 function validateRegist() {
     return validateMid() && validatePassword();
 }
+function validateLogin() {
+    return validateMid() && validatePassword() && validateCode();
+}

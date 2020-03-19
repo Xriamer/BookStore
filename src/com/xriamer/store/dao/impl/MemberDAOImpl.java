@@ -103,4 +103,20 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
         super.pstmt.setString(2,mid);
         return super.pstmt.executeUpdate()>0;
     }
+
+    @Override
+    public boolean findLogin(Member mb) throws Exception {
+        boolean flag=false;
+        //必须保证用户的登录状态是1(正常状态)
+        String sql="SELECT photo FROM member WHERE mid=? AND password=? AND status=1";
+        super.pstmt=super.conn.prepareStatement(sql);
+        super.pstmt.setString(1,mb.getMid());
+        super.pstmt.setString(2,mb.getPassword());
+        ResultSet rs=super.pstmt.executeQuery();
+        if(rs.next()){
+            flag=true;
+            mb.setPhoto(rs.getString(1));
+        }
+        return flag;
+    }
 }

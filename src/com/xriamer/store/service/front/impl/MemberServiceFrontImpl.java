@@ -35,4 +35,15 @@ public class MemberServiceFrontImpl implements IMemberServiceFront {
             this.dbc.close();
         }
     }
+
+    @Override
+    public boolean login(Member mb) throws Exception {
+        try {
+                return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findLogin(mb);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            this.dbc.close();
+        }
+    }
 }

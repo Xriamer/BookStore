@@ -25,4 +25,12 @@ public interface IMemberServiceFront {
      * @throws Exception
      */
     public boolean active(Member mb) throws Exception;
+
+    /**
+     * 用户登录操作，调用IMemberDAO.findLogin()方法，只能登录激活的用户
+     * @param mb 包含有mid与password的VO类对象
+     * @return 登陆成功返回true，否则返回false
+     * @throws Exception
+     */
+    public boolean login(Member mb) throws Exception;
 }
