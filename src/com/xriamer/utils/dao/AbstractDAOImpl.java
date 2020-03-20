@@ -49,7 +49,7 @@ public abstract class AbstractDAOImpl {
      */
     public Integer countHandle(String table, String column, String keyWord) throws Exception {
         StringBuffer sql = new StringBuffer();
-        sql.append("SELECT COUNT(*) FROM").append(table).append(" WHERE ").append(column).append(" LIKE ?");
+        sql.append("SELECT COUNT(*) FROM ").append(table).append(" WHERE ").append(column).append(" LIKE ?");
         this.pstmt = this.conn.prepareStatement(sql.toString());
         this.pstmt.setString(1, "%" + keyWord + "%");
         ResultSet rs = this.pstmt.executeQuery();

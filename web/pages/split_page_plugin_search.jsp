@@ -1,4 +1,4 @@
-<%@ page pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 <%--
 <div id="splitSearchDiv">
 	<jsp:include page="/pages/split_page_plugin_search.jsp"/>

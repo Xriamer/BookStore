@@ -3,7 +3,7 @@ package com.xriamer.utils.filter;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
-@WebFilter(filterName = "encodingFilter",urlPatterns = "/*")
+@WebFilter(filterName = "encodingFilter" , urlPatterns = "/*")
 public class EncodingFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

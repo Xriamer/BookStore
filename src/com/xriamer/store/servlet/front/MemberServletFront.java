@@ -1,4 +1,4 @@
-package com.xriamer.servlet.front;
+package com.xriamer.store.servlet.front;
 
 import com.xriamer.store.factory.ServiceFrontDactory;
 import com.xriamer.store.vo.Member;
@@ -18,7 +18,7 @@ import java.util.UUID;
 @WebServlet(name = "MemberServletFront", urlPatterns = "/pages/MemberServletFront/*")
 public class MemberServletFront extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = "/pages/errors.jsp";
         String status = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1);
         if (status != null) {
@@ -68,7 +68,7 @@ public class MemberServletFront extends HttpServlet {
             }
         } else {
             msg = "输入的用户注册信息不正确，请重新注册!";
-            url = "/pages/regist.jsp";
+            url = "/pages/member_regist.jsp";
         }
         request.setAttribute("msg", msg);
         request.setAttribute("url", url);

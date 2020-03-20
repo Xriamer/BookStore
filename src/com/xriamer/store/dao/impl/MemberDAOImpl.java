@@ -87,8 +87,7 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
         super.pstmt.setString(2,code);
         ResultSet rs=super.pstmt.executeQuery();
         if(rs.next()){
-            if(rs.getInt(1)>0)
-            {
+            if(rs.getInt(1)>0){
                 return true;
             }
         }

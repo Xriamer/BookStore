@@ -4,6 +4,9 @@ function validateMid() {
 function validatePassword() {
     return validateEmpty("password");
 }
+function validateCode() {
+    return validateEmpty("code");
+}
 function validateRegist() {
     return validateMid() && validatePassword();
 }

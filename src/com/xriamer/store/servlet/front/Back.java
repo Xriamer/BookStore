@@ -1,4 +1,4 @@
-package com.xriamer.servlet.front;
+package com.xriamer.store.servlet.front;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,10 +9,10 @@ import java.io.IOException;
 //@WebServlet(name="MemberServletFront",urlPatterns = "/pages/MemberServletFront/*")
 public class Back extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = "/pages/errors.jsp";
-        request.getRequestDispatcher(path).forward(request, response);
-        String status = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/" + 1));
+        //request.getRequestDispatcher(path).forward(request, response);
+        String status = request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1);
         if (status != null) {
             if ("regist".equals(status)) {
             }
@@ -21,7 +21,7 @@ public class Back extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
     }
 }

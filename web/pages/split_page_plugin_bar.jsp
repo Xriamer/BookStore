@@ -1,4 +1,4 @@
-<%@ page pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 <%--
 <div id="splitBarDiv" style="float:right">
 	<jsp:include page="/pages/split_page_plugin_bars.jsp"/>
