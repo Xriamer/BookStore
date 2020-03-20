@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
-    public MemberDAOImpl(Connection conn){
+    public MemberDAOImpl(Connection conn) {
         super(conn);
     }
 
@@ -22,15 +22,15 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public boolean doCreate(Member mb) throws Exception {
-        String sql="INSERT INTO member(mid,password,code,regdate,status,photo) VALUES (?,?,?,?,?,?)";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,mb.getMid());
-        super.pstmt.setString(2,mb.getPassword());
-        super.pstmt.setString(3,mb.getCode());
-        super.pstmt.setTimestamp(4,new Timestamp(mb.getRegdate().getTime()));
-        super.pstmt.setInt(5,mb.getStatus());
-        super.pstmt.setString(6,mb.getPhoto());
-        return super.pstmt.executeUpdate()>0;
+        String sql = "INSERT INTO member(mid,password,code,regdate,status,photo) VALUES (?,?,?,?,?,?)";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, mb.getMid());
+        super.pstmt.setString(2, mb.getPassword());
+        super.pstmt.setString(3, mb.getCode());
+        super.pstmt.setTimestamp(4, new Timestamp(mb.getRegdate().getTime()));
+        super.pstmt.setInt(5, mb.getStatus());
+        super.pstmt.setString(6, mb.getPhoto());
+        return super.pstmt.executeUpdate() > 0;
     }
 
     @Override
@@ -45,13 +45,13 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public Member findById(String id) throws Exception {
-        Member mb=null;
-        String sql="SELECT mid,password,name,phone,address,code,status,regdate,photo FROM member WHERE mid =?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,id);
-        ResultSet rs=super.pstmt.executeQuery();
-        if(rs.next()){
-            mb=new Member();
+        Member mb = null;
+        String sql = "SELECT mid,password,name,phone,address,code,status,regdate,photo FROM member WHERE mid =?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, id);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            mb = new Member();
             mb.setMid(rs.getString(1));
             mb.setPassword(rs.getString(2));
             mb.setName(rs.getString(3));
@@ -81,13 +81,13 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public boolean findByCode(String mid, String code) throws Exception {
-        String sql="SELECT COUNT(*) FROM member WHERE mid=? AND code=? AND status=2";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,mid);
-        super.pstmt.setString(2,code);
-        ResultSet rs=super.pstmt.executeQuery();
-        if(rs.next()){
-            if(rs.getInt(1)>0){
+        String sql = "SELECT COUNT(*) FROM member WHERE mid=? AND code=? AND status=2";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, mid);
+        super.pstmt.setString(2, code);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            if (rs.getInt(1) > 0) {
                 return true;
             }
         }
@@ -96,24 +96,24 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public boolean doUpdateStatus(String mid, Integer status) throws Exception {
-        String sql="UPDATE member SET status=? WHERE mid=?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setInt(1,status);
-        super.pstmt.setString(2,mid);
-        return super.pstmt.executeUpdate()>0;
+        String sql = "UPDATE member SET status=? WHERE mid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1, status);
+        super.pstmt.setString(2, mid);
+        return super.pstmt.executeUpdate() > 0;
     }
 
     @Override
     public boolean findLogin(Member mb) throws Exception {
-        boolean flag=false;
+        boolean flag = false;
         //必须保证用户的登录状态是1(正常状态)
-        String sql="SELECT photo FROM member WHERE mid=? AND password=? AND status=1";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,mb.getMid());
-        super.pstmt.setString(2,mb.getPassword());
-        ResultSet rs=super.pstmt.executeQuery();
-        if(rs.next()){
-            flag=true;
+        String sql = "SELECT photo FROM member WHERE mid=? AND password=? AND status=1";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, mb.getMid());
+        super.pstmt.setString(2, mb.getPassword());
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            flag = true;
             mb.setPhoto(rs.getString(1));
         }
         return flag;

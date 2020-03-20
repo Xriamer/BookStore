@@ -5,7 +5,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
-            + path ;
+            + path;
 %>
 <html>
 <head>
@@ -17,7 +17,7 @@
 <body>
 <script type="text/javascript">
     window.alert("${msg}");
-    window.location="<%=basePath%>${url}";
+    window.location = "<%=basePath%>${url}";
 </script>
 </body>
 </html>

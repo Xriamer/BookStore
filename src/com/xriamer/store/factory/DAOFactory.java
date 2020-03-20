@@ -6,8 +6,7 @@ import com.xriamer.store.dao.impl.MemberDAOImpl;
 import java.sql.Connection;
 
 public class DAOFactory {
-    public static IMemberDAO getIMemberDAOInstance(Connection conn)
-    {
+    public static IMemberDAO getIMemberDAOInstance(Connection conn) {
         return new MemberDAOImpl(conn);
     }
 }

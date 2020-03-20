@@ -25,7 +25,7 @@
                 <td colspan="3">用户注册</td>
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                <td width="15%">用户ID: </td>
+                <td width="15%">用户ID:</td>
                 <td width="40%"><input type="text" name="mid" id="mid" class="init" onblur="validateMid()"></td>
                 <td width="45%"><span id="midMsg"></span></td>
             </tr>

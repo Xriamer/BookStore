@@ -1,6 +1,6 @@
 package com.xriamer.store.servlet.front;
 
-import com.xriamer.store.factory.ServiceFrontDactory;
+import com.xriamer.store.factory.ServiceFrontFactory;
 import com.xriamer.store.vo.Member;
 import com.xriamer.utils.BasePath;
 import com.xriamer.utils.MD5Code;
@@ -55,7 +55,7 @@ public class MemberServletFront extends HttpServlet {
             mb.setCode(UUID.randomUUID().toString());//生成一个随记的Code码
             mb.setStatus(2);//现在属于待激活状态
             try {
-                if (ServiceFrontDactory.getIMemberServiceFrontInstance().regist(mb)) {
+                if (ServiceFrontFactory.getIMemberServiceFrontInstance().regist(mb)) {
                     msg = "注册成功，请进行账户激活！";
                     url = "/index.jsp";
                     System.out.println("【发出激活邮件】" + BasePath.getBasePath(request) + "/pages/MemberServletFront/active?mid=" + mid + "&code=" + mb.getCode());
@@ -75,7 +75,7 @@ public class MemberServletFront extends HttpServlet {
         return "/pages/forward.jsp";
     }
 
-    private String active(HttpServletRequest request) {
+    public String active(HttpServletRequest request) {
         String msg = null;
         String url = null;
         String mid = request.getParameter("mid");
@@ -85,7 +85,7 @@ public class MemberServletFront extends HttpServlet {
             mb.setMid(mid);
             mb.setCode(code);
             try {
-                if (ServiceFrontDactory.getIMemberServiceFrontInstance().active(mb)) {
+                if (ServiceFrontFactory.getIMemberServiceFrontInstance().active(mb)) {
                     msg = "用户激活成功，请登录！";
                     url = "/pages/member_login.jsp";
                 } else {
@@ -96,12 +96,12 @@ public class MemberServletFront extends HttpServlet {
                 e.printStackTrace();
             }
         } else {
-            msg = "错误的激活操作，请与管理员联系";
+            msg = "错误的激活操作，请与管理员联系！";
             url = "/index.jsp";
         }
         request.setAttribute("msg", msg);
         request.setAttribute("url", url);
-        return "pages/forward.jsp";
+        return "/pages/forward.jsp";
     }
 
     public String login(HttpServletRequest request) {
@@ -118,7 +118,7 @@ public class MemberServletFront extends HttpServlet {
                 mb.setMid(mid);
                 mb.setPassword(new MD5Code().getMD5ofStr(password));
                 try {
-                    if (ServiceFrontDactory.getIMemberServiceFrontInstance().login(mb)) {
+                    if (ServiceFrontFactory.getIMemberServiceFrontInstance().login(mb)) {
                         request.getSession().setAttribute("mid", mid);
                         request.getSession().setAttribute("photo", mb.getPhoto());
                         msg = "登录成功！";

@@ -6,7 +6,7 @@
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
-    String loginUrl=basePath+"pages/MemberServletFront/login";
+    String loginUrl = basePath + "pages/MemberServletFront/login";
 %>
 <html>
 <head>
@@ -38,7 +38,8 @@
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                 <td>验证码:</td>
                 <td>
-                    <input type="text" name="code" id="code" maxlength="4" size="4" class="init" onblur="validateCode()">
+                    <input type="text" name="code" id="code" maxlength="4" size="4" class="init"
+                           onblur="validateCode()">
                     <img src="pages/image.jsp" style="width:80px;height:25px">
                 </td>
                 <td><span id="CodeMsg"></span></td>

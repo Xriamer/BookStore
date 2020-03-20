@@ -1,4 +1,4 @@
-<%@ page pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 <link rel="stylesheet" type="text/css" href="base.css">
 <%--
 <div id="splitBarDiv" style="float:right">

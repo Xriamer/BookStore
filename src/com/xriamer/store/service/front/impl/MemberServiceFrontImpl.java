@@ -6,17 +6,18 @@ import com.xriamer.store.service.front.IMemberServiceFront;
 import com.xriamer.store.vo.Member;
 
 public class MemberServiceFrontImpl implements IMemberServiceFront {
-    private DatabaseConnection dbc=new DatabaseConnection();
+    private DatabaseConnection dbc = new DatabaseConnection();
+
     @Override
     public boolean regist(Member mb) throws Exception {
         try {
-            if(DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findById(mb.getMid())==null){
+            if (DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findById(mb.getMid()) == null) {
                 return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doCreate(mb);
             }
             return false;
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
-        }finally {
+        } finally {
             this.dbc.close();
         }
 
@@ -25,13 +26,13 @@ public class MemberServiceFrontImpl implements IMemberServiceFront {
     @Override
     public boolean active(Member mb) throws Exception {
         try {
-            if(DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findByCode(mb.getMid(),mb.getCode())){
-                return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateStatus(mb.getMid(),1);
+            if (DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findByCode(mb.getMid(), mb.getCode())) {
+                return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateStatus(mb.getMid(), 1);
             }
             return false;
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
-        }finally {
+        } finally {
             this.dbc.close();
         }
     }
@@ -39,10 +40,10 @@ public class MemberServiceFrontImpl implements IMemberServiceFront {
     @Override
     public boolean login(Member mb) throws Exception {
         try {
-                return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findLogin(mb);
-        }catch (Exception e){
+            return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findLogin(mb);
+        } catch (Exception e) {
             throw e;
-        }finally {
+        } finally {
             this.dbc.close();
         }
     }

@@ -20,13 +20,15 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
+
     public Connection getConnection() {
-        return this.conn ;
+        return this.conn;
     }
+
     public void close() {
         if (this.conn != null) {
             try {
-                this.conn.close() ;
+                this.conn.close();
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

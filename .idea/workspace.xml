@@ -6,43 +6,48 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="User Login">
+    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/servlet/front/Back.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/servlet/front/MemberServletFront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/dao/IMemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/dao/IMemberDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/service/front/IMemberServiceFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/service/front/IMemberServiceFront.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/BasePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/BasePath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/forward.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/forward.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/others.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/others.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/servlet/front/Back.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/servlet/front/MemberServletFront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/dao/IMemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/dao/IMemberDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/dao/impl/MemberDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/dao/impl/MemberDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/service/front/IMemberServiceFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/service/front/IMemberServiceFront.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/BasePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/BasePath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/servlet/front/Back.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/Back.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/servlet/front/MemberServletFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/MemberServletFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/dao/impl/MemberDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/dao/impl/MemberDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/dbc/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/dbc/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/vo/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/vo/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/dao/AbstractDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/dao/AbstractDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/validate/ValidateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/validate/ValidateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/js/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/js/member.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/errors.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/errors.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/member_regist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/member_regist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/split_page_plugin_bar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/split_page_plugin_bar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/split_page_plugin_bars.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/split_page_plugin_bars.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/split_page_plugin_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/split_page_plugin_search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/dbc/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/dbc/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/vo/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/vo/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/dao/AbstractDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/dao/AbstractDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/validate/ValidateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/validate/ValidateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dao/IDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dao/IMemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IMemberDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dbc/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dbc/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceFrontDactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceFrontFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/service/front/IMemberServiceFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/front/IMemberServiceFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/MemberServletFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/MemberServletFront.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/vo/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/dao/AbstractDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/dao/AbstractDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/BasePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/BasePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/MD5Code.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/MD5Code.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/validate/ValidateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/validate/ValidateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/WdatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/WdatePicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/calendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/member.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/errors.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/errors.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/forward.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/forward.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/image.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/image.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/member_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/member_login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/member_regist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/member_regist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/others.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/others.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/split_page_plugin_bar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_bar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/split_page_plugin_bars.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_bars.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/split_page_plugin_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_search.jsp" afterDir="false" />
@@ -331,7 +336,16 @@
       <workItem from="1584580248234" duration="612000" />
       <workItem from="1584595976068" duration="17556000" />
       <workItem from="1584667904151" duration="5054000" />
-      <workItem from="1584679265114" duration="4163000" />
+      <workItem from="1584679265114" duration="4402000" />
+      <workItem from="1584683872988" duration="349000" />
+      <workItem from="1584686837353" duration="1813000" />
+      <workItem from="1584691924978" duration="731000" />
+      <workItem from="1584692819921" duration="1325000" />
+      <workItem from="1584705861426" duration="93000" />
+      <workItem from="1584707811524" duration="68000" />
+      <workItem from="1584708058373" duration="565000" />
+      <workItem from="1584708664321" duration="68000" />
+      <workItem from="1584709605719" duration="8385000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -494,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584634882046</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="User Login logic correction">
+      <created>1584683501230</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1584683501230</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +533,8 @@
     <MESSAGE value="The status of connect to database is normal" />
     <MESSAGE value="Verification code" />
     <MESSAGE value="User Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Login" />
+    <MESSAGE value="User Login logic correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Login logic correction" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="75" key="#Chrome_Settings" timestamp="1584446791465">
@@ -535,6 +557,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="72" width="1089" height="749" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1584459226996" />
+    <state x="885" y="321" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1584707860970">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="885" y="321" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.834@0.0.1536.834" timestamp="1584707860970" />
     <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1584622537378">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -555,10 +581,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1584634880661">
+    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1584683498665">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584634880661" />
+    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584683498665" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -567,82 +593,82 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="685" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584531096813" />
-    <state width="1096" height="589" key="GridCell.Tab.0.bottom" timestamp="1584683333630">
+    <state width="1443" height="2" key="GridCell.Tab.0.bottom" timestamp="1584718680849">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584683333630" />
-    <state width="1096" height="589" key="GridCell.Tab.0.center" timestamp="1584683333630">
+    <state width="1443" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584718680849" />
+    <state width="1443" height="2" key="GridCell.Tab.0.center" timestamp="1584718680849">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584683333630" />
-    <state width="1096" height="589" key="GridCell.Tab.0.left" timestamp="1584683333630">
+    <state width="1443" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584718680849" />
+    <state width="1443" height="2" key="GridCell.Tab.0.left" timestamp="1584718680849">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584683333630" />
-    <state width="1096" height="589" key="GridCell.Tab.0.right" timestamp="1584683333630">
+    <state width="1443" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584718680849" />
+    <state width="1443" height="2" key="GridCell.Tab.0.right" timestamp="1584718680849">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584683333630" />
-    <state width="1096" height="589" key="GridCell.Tab.1.bottom" timestamp="1584683334446">
+    <state width="1443" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584718680849" />
+    <state width="1443" height="2" key="GridCell.Tab.1.bottom" timestamp="1584718680738">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584683334446" />
-    <state width="1096" height="589" key="GridCell.Tab.1.center" timestamp="1584683334445">
+    <state width="1443" height="2" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584718680738" />
+    <state width="1443" height="2" key="GridCell.Tab.1.center" timestamp="1584718680737">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584683334445" />
-    <state width="1096" height="589" key="GridCell.Tab.1.left" timestamp="1584683334445">
+    <state width="1443" height="2" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584718680737" />
+    <state width="1443" height="2" key="GridCell.Tab.1.left" timestamp="1584718680737">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584683334445" />
-    <state width="1096" height="589" key="GridCell.Tab.1.right" timestamp="1584683334445">
+    <state width="1443" height="2" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584718680737" />
+    <state width="1443" height="2" key="GridCell.Tab.1.right" timestamp="1584718680738">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584683334445" />
-    <state width="1096" height="589" key="GridCell.Tab.2.bottom" timestamp="1584683335383">
+    <state width="1443" height="2" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584718680738" />
+    <state width="1443" height="2" key="GridCell.Tab.2.bottom" timestamp="1584718680738">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584683335383" />
-    <state width="1096" height="589" key="GridCell.Tab.2.center" timestamp="1584683335382">
+    <state width="1443" height="2" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584718680738" />
+    <state width="1443" height="2" key="GridCell.Tab.2.center" timestamp="1584718680738">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584683335382" />
-    <state width="1096" height="589" key="GridCell.Tab.2.left" timestamp="1584683335382">
+    <state width="1443" height="2" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584718680738" />
+    <state width="1443" height="2" key="GridCell.Tab.2.left" timestamp="1584718680738">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584683335382" />
-    <state width="1096" height="589" key="GridCell.Tab.2.right" timestamp="1584683335383">
+    <state width="1443" height="2" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584718680738" />
+    <state width="1443" height="2" key="GridCell.Tab.2.right" timestamp="1584718680738">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1096" height="589" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584683335383" />
-    <state width="1296" height="319" key="GridCell.Tab.3.bottom" timestamp="1584635531395">
+    <state width="1443" height="2" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584718680738" />
+    <state width="1443" height="373" key="GridCell.Tab.3.bottom" timestamp="1584715776508">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1296" height="319" key="GridCell.Tab.3.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584635531395" />
-    <state width="1296" height="319" key="GridCell.Tab.3.center" timestamp="1584635531395">
+    <state width="1443" height="373" key="GridCell.Tab.3.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584715776508" />
+    <state width="1443" height="373" key="GridCell.Tab.3.center" timestamp="1584715776507">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1296" height="319" key="GridCell.Tab.3.center/0.0.1536.834@0.0.1536.834" timestamp="1584635531395" />
-    <state width="1296" height="319" key="GridCell.Tab.3.left" timestamp="1584635531395">
+    <state width="1443" height="373" key="GridCell.Tab.3.center/0.0.1536.834@0.0.1536.834" timestamp="1584715776507" />
+    <state width="1443" height="373" key="GridCell.Tab.3.left" timestamp="1584715776507">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1296" height="319" key="GridCell.Tab.3.left/0.0.1536.834@0.0.1536.834" timestamp="1584635531395" />
-    <state width="1296" height="319" key="GridCell.Tab.3.right" timestamp="1584635531395">
+    <state width="1443" height="373" key="GridCell.Tab.3.left/0.0.1536.834@0.0.1536.834" timestamp="1584715776507" />
+    <state width="1443" height="373" key="GridCell.Tab.3.right" timestamp="1584715776508">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1296" height="319" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1584635531395" />
+    <state width="1443" height="373" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1584715776508" />
     <state x="214" y="0" key="SettingsEditor" timestamp="1584539402317">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584539402317" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584634886093">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584683505473">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584634886093" />
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584679270930">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584683505473" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584709641302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584679270930" />
+    <state x="465" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584709641302" />
     <state x="463" y="311" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584531063146">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -668,9 +694,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/xriamer/store/servlet/front/MemberServletFront.java</url>
+          <url>file://$PROJECT_DIR$/src/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/xriamer/store/service/front/impl/MemberServiceFrontImpl.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java</url>
           <line>87</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
