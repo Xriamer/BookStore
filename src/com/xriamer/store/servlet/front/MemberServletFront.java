@@ -3,6 +3,7 @@ package com.xriamer.store.servlet.front;
 import com.xriamer.store.factory.ServiceFrontFactory;
 import com.xriamer.store.vo.Member;
 import com.xriamer.utils.BasePath;
+import com.xriamer.utils.CookieUtil;
 import com.xriamer.utils.MD5Code;
 import com.xriamer.utils.validate.ValidateUtil;
 
@@ -27,7 +28,9 @@ public class MemberServletFront extends HttpServlet {
             } else if ("active".equals(status)) {
                 path = this.active(request);
             } else if ("login".equals(status)) {
-                path = this.login(request);
+                path = this.login(request, response);
+            } else if ("logout".equals(status)) {
+                path = this.logout(request, response);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
@@ -104,7 +107,7 @@ public class MemberServletFront extends HttpServlet {
         return "/pages/forward.jsp";
     }
 
-    public String login(HttpServletRequest request) {
+    public String login(HttpServletRequest request, HttpServletResponse response) {
         String msg = null;
         String url = null;
         String mid = request.getParameter("mid");
@@ -123,6 +126,11 @@ public class MemberServletFront extends HttpServlet {
                         request.getSession().setAttribute("photo", mb.getPhoto());
                         msg = "登录成功！";
                         url = "/index.jsp";
+                        if (request.getParameter("remember") != null) {
+                            int expiry = Integer.parseInt(request.getParameter("remember"));
+                            CookieUtil.save(response, request, "mid", mid, expiry);
+                            CookieUtil.save(response, request, "password", mb.getPassword(), expiry);
+                        }
                     } else {
                         msg = "登陆失败，错误的用户名或密码！";
                         url = "/pages/member_login.jsp";
@@ -140,6 +148,14 @@ public class MemberServletFront extends HttpServlet {
         }
         request.setAttribute("msg", msg);
         request.setAttribute("url", url);
+        return "/pages/forward.jsp";
+    }
+
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+        CookieUtil.clear(request, response);
+        request.getSession().invalidate();
+        request.setAttribute("msg", "您已经安全退出！");
+        request.setAttribute("url", "/index.jsp");
         return "/pages/forward.jsp";
     }
 }

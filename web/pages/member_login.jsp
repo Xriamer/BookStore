@@ -19,7 +19,6 @@
 <body>
 <jsp:include page="/pages/header.jsp"/>
 <div id="mainDiv">
-    编写登陆表单
     <form action="<%=loginUrl%>" method="post" onsubmit="return validateLogin()">
         <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" align="center" width="80%">
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
@@ -43,6 +42,11 @@
                     <img src="pages/image.jsp" style="width:80px;height:25px">
                 </td>
                 <td><span id="CodeMsg"></span></td>
+            </tr>
+            <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
+                <td colspan="3">
+                    <input type="checkbox" name="remember" id="remember" value="7776000">记住密码
+                </td>
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                 <td colspan="3">

@@ -10,6 +10,7 @@
     </c:if>
     <c:if test="${mid!=null}">
         <a href="">个人中心</a>
+        <a href="pages/MemberServletFront/logout">安全退出</a>
         <img src="upload/member/${photo}" style="width: 50px;height: 50px;">
     </c:if>
 </div>
