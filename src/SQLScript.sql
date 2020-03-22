@@ -100,7 +100,7 @@ INSERT INTO item(title) VALUES('教育培训');
 INSERT INTO item(title) VALUES('生活');
 INSERT INTO item(title) VALUES('电子书');
 --增加管理员信息 admin/hello
-INSERT INTO admin(aid,password) VALUES('admin','5D41402ABC4B2A76B9719D911017C592');
+INSERT INTO admin(aid,password) VALUES('admin1','8B1A9953C4611296A827ABF8C47804D7');
 --增加普通用户信息  xriamer/java
 INSERT INTO member(mid,password,regdate) VALUES('xriamer','D52387880E1EA22817A72D3759213819','2019-12-26');
 

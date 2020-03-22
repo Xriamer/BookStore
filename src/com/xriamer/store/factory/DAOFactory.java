@@ -1,6 +1,8 @@
 package com.xriamer.store.factory;
 
+import com.xriamer.store.dao.IAdminDAO;
 import com.xriamer.store.dao.IMemberDAO;
+import com.xriamer.store.dao.impl.AdminDAOImpl;
 import com.xriamer.store.dao.impl.MemberDAOImpl;
 
 import java.sql.Connection;
@@ -8,5 +10,9 @@ import java.sql.Connection;
 public class DAOFactory {
     public static IMemberDAO getIMemberDAOInstance(Connection conn) {
         return new MemberDAOImpl(conn);
+    }
+
+    public static IAdminDAO getIAdminDAOInstance(Connection conn) {
+        return new AdminDAOImpl(conn);
     }
 }
