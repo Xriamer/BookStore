@@ -81,7 +81,7 @@ public class AdminLoginServletBack extends HttpServlet {
         request.getSession().invalidate();
         request.setAttribute("msg", "管理员注销成功，再见");
         request.setAttribute("url", "/pages/back/login.jsp");
-        return "pages/forward.jsp";
+        return "/pages/forward.jsp";
     }
 
 }

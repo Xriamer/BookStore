@@ -107,29 +107,29 @@ A.left:hover {
 	FONT-SIZE: 9pt; COLOR: #333333; TEXT-DECORATION: none
 }
 BODY {
-	FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-FAMILY: "ËÎÌå"
+	FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-FAMILY: "ï¿½ï¿½ï¿½ï¿½"
 }
 BODY {
 	SCROLLBAR-FACE-COLOR: #efefef; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #ededed; SCROLLBAR-DARKSHADOW-COLOR: #cccccc
 }
 INPUT {
-	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT-FAMILY: "ËÎÌå"
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; FONT-FAMILY: "ï¿½ï¿½ï¿½ï¿½"
 }
 TD {
 	MARGIN-TOP: 0px; FONT-SIZE: 9pt; MARGIN-BOTTOM: 0px; LINE-HEIGHT: 150%
 }
-.font {
-	FILTER: glow(color=#000000,strength=1) dropshadow(color=#aaaaaa,offx=1, offy=1, positive=2); MARGIN: 0px; COLOR: #ffffff; HEIGHT: 20px; TEXT-DECORATION: none
-}
-.font1 {
-	FONT-SIZE: 10pt; FILTER: glow(color=#ffffff,strength=1); COLOR: #000000; HEIGHT: 12px
-}
-.font2 {
-	FONT-SIZE: 10pt; FILTER: glow(color=#ffffff,strength=1); COLOR: #000000; HEIGHT: 12px
-}
-.fontcom {
-	FONT-SIZE: 26pt; FILTER: glow(color=#ffffff,strength=1); COLOR: #000000; HEIGHT: 12px
-}
+/*.font {*/
+/*	FILTER: glow(color=#000000,strength=1) dropshadow(color=#aaaaaa,offx=1, offy=1, positive=2); MARGIN: 0px; COLOR: #ffffff; HEIGHT: 20px; TEXT-DECORATION: none*/
+/*}*/
+/*.font1 {*/
+/*	FONT-SIZE: 10pt; FILTER: glow(color=#ffffff,strength=1); COLOR: #000000; HEIGHT: 12px*/
+/*}*/
+/*.font2 {*/
+/*	FONT-SIZE: 10pt; FILTER: glow(color=#ffffff,strength=1); COLOR: #000000; HEIGHT: 12px*/
+/*}*/
+/*.fontcom {*/
+/*	FONT-SIZE: 26pt; FILTER: glow(color=#ffffff,strength=1); COLOR: #000000; HEIGHT: 12px*/
+/*}*/
 .h {
 	MARGIN-TOP: 8px
 }
@@ -178,39 +178,39 @@ TD {
 .td5 {
 	BORDER-RIGHT: #cc9900 1px solid; BORDER-TOP: #cc9900 1px solid; BORDER-LEFT: #cc9900 1px solid; WORD-BREAK: break-all; BORDER-BOTTOM: #cc9900 1px solid
 }
-.td6 {
-	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/d.gif); WIDTH: 22px; COLOR: #ffffff; TEXT-ALIGN: center
-}
+/*.td6 {*/
+/*	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/d.gif); WIDTH: 22px; COLOR: #ffffff; TEXT-ALIGN: center*/
+/*}*/
 .tdg {
 	FONT-SIZE: 10pt; WIDTH: 100px; BACKGROUND-COLOR: #ffefdf; TEXT-ALIGN: center
 }
-.tdxi {
-	BACKGROUND-IMAGE: url(../image/xibar.gif); HEIGHT: 25px
-}
-.tdad {
-	BORDER-LEFT-WIDTH: 1px; BACKGROUND-IMAGE: url(../image/bad.jpg); BORDER-BOTTOM: #999999 1px solid; HEIGHT: 25px; BORDER-RIGHT-WIDTH: 1px
-}
-.tdad2 {
-	BORDER-TOP: #999999 1px solid; BORDER-LEFT-WIDTH: 1px; BACKGROUND-IMAGE: url(../image/bad.jpg); BORDER-BOTTOM: #999999 1px solid; HEIGHT: 25px; BORDER-RIGHT-WIDTH: 1px
-}
-.tdcom {
-	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/cb.jpg); COLOR: #ffffff; HEIGHT: 38px; TEXT-ALIGN: center
-}
-.tdcom1 {
-	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/01_19.jpg); HEIGHT: 30px
-}
-.tdcom2 {
-	BACKGROUND-IMAGE: url(../image/ce.gif); HEIGHT: 30px
-}
-.tdcom3 {
-	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/01_16.jpg); HEIGHT: 30px
-}
+/*.tdxi {*/
+/*	BACKGROUND-IMAGE: url(../image/xibar.gif); HEIGHT: 25px*/
+/*}*/
+/*.tdad {*/
+/*	BORDER-LEFT-WIDTH: 1px; BACKGROUND-IMAGE: url(../image/bad.jpg); BORDER-BOTTOM: #999999 1px solid; HEIGHT: 25px; BORDER-RIGHT-WIDTH: 1px*/
+/*}*/
+/*.tdad2 {*/
+/*	BORDER-TOP: #999999 1px solid; BORDER-LEFT-WIDTH: 1px; BACKGROUND-IMAGE: url(../image/bad.jpg); BORDER-BOTTOM: #999999 1px solid; HEIGHT: 25px; BORDER-RIGHT-WIDTH: 1px*/
+/*}*/
+/*.tdcom {*/
+/*	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/cb.jpg); COLOR: #ffffff; HEIGHT: 38px; TEXT-ALIGN: center*/
+/*}*/
+/*.tdcom1 {*/
+/*	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/01_19.jpg); HEIGHT: 30px*/
+/*}*/
+/*.tdcom2 {*/
+/*	BACKGROUND-IMAGE: url(../image/ce.gif); HEIGHT: 30px*/
+/*}*/
+/*.tdcom3 {*/
+/*	FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../image/01_16.jpg); HEIGHT: 30px*/
+/*}*/
 .di {
 	PADDING-BOTTOM: 2px; PADDING-TOP: 3px; BORDER-BOTTOM: #dedfde 1px dotted
 }
 A.a04 {
 	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-SIZE: 9pt; PADDING-BOTTOM: 6px; MARGIN: auto; WIDTH: 53px; PADDING-TOP: 2px; HEIGHT: 27px; TEXT-DECORATION: none
 }
-A.a04:hover {
-	FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(../image/button_menu_01_off.gif); TEXT-DECORATION: none
-}
+/*A.a04:hover {*/
+/*	FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(../image/button_menu_01_off.gif); TEXT-DECORATION: none*/
+/*}*/

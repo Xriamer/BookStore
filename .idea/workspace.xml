@@ -6,172 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="Finish admin user login.">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IAdminDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/AdminDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceBackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/filter/AdminLoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/IAdminServiceBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/impl/AdminServiceBackImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/AdminLoginServletBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/!.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/DefaultDocs.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/Login_but.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/OK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/Redirects.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/Submit_bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/X.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ad.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/add.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/back.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/bigsize.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/bootnbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/bullet.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/buttom-copy-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/buttom-left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/buttom-right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/buttom_bgs.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/buttom_left2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/buttom_right2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/card.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/check-out_.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/close.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/content-bg-line.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/content-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/database_import_.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/defind.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/del.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/delete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/delete_6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/edit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ershou_1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ershou_2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/fox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/g.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gw.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/gw2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon-demo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon-login-seaver.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon-mail2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon-phone.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon2_004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon2_089.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/icon2_090.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/image_(add)6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/image_1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/imagedelete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/imageedit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ipsecurity.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/l1b3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/l1b4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/l1b5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/left-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/left-top-right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/line2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/linkspic3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/linkspic6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/lm.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/lminfo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/login-buttom-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/login-content-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/login-top-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/login-wel.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/login_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/luck.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/mail_leftbg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/mail_rightbg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/menu_bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/menu_bg1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/menu_bg2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/menu_bgs.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/menu_topimg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/menu_topline.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/mime.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/nav-right-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/news-title-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ok.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/out.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/password.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/pic9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/report2_(add).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/report2_(delete).gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/right_smbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/servicezhgb2312.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/set.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/set2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/sitebackup.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/skin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/smallbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/st.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/st.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/stop.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/str.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/t2bg1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/t2bg2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/t2bg4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/t2bg5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/title.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/tj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/to.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/tool-down-pic.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/top-right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/top_bt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/ts.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/user-info.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/usercontrol.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/vie.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/yc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/yx.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/moo.fx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/moo.fx.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/prototype.lite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/admin_top.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/admintitle.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/left.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/right.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/SQLScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/SQLScript.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/factory/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/factory/DAOFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/test/TestMD5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/test/TestMD5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/SQLScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/SQLScript.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/factory/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/factory/DAOFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/test/TestMD5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/test/TestMD5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SQLScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQLScript.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/Back.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/Back.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/test/TestMD5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/test/TestMD5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/AdminLoginServletBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/AdminLoginServletBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/fox.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/images/fox.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,11 +74,11 @@
       <recent name="com.xriamer.store.servlet.back" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\images" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\css" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\js" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\pages\back" />
-      <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\pages\back\admin" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.BookStore">
@@ -472,7 +310,7 @@
       <workItem from="1584708664321" duration="68000" />
       <workItem from="1584709605719" duration="8507000" />
       <workItem from="1584754811493" duration="13005000" />
-      <workItem from="1584844225533" duration="22635000" />
+      <workItem from="1584844225533" duration="25554000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -656,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584803443667</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Finish admin user login.">
+      <created>1584876810912</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1584876810912</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,10 +574,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1584874939789">
+    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1584876808805">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584874939789" />
+    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584876808805" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -741,54 +586,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="685" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584876026870" />
-    <state width="1443" height="84" key="GridCell.Tab.0.bottom" timestamp="1584876274399">
+    <state width="1443" height="66" key="GridCell.Tab.0.bottom" timestamp="1584891944683">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584876274399" />
-    <state width="1443" height="84" key="GridCell.Tab.0.center" timestamp="1584876274398">
+    <state width="1443" height="66" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584891944683" />
+    <state width="1443" height="66" key="GridCell.Tab.0.center" timestamp="1584891944683">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584876274398" />
-    <state width="1443" height="84" key="GridCell.Tab.0.left" timestamp="1584876274398">
+    <state width="1443" height="66" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584891944683" />
+    <state width="1443" height="66" key="GridCell.Tab.0.left" timestamp="1584891944682">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584876274398" />
-    <state width="1443" height="84" key="GridCell.Tab.0.right" timestamp="1584876274399">
+    <state width="1443" height="66" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584891944682" />
+    <state width="1443" height="66" key="GridCell.Tab.0.right" timestamp="1584891944683">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584876274399" />
-    <state width="1443" height="84" key="GridCell.Tab.1.bottom" timestamp="1584876274284">
+    <state width="1443" height="66" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584891944683" />
+    <state width="1443" height="66" key="GridCell.Tab.1.bottom" timestamp="1584891944566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584876274284" />
-    <state width="1443" height="84" key="GridCell.Tab.1.center" timestamp="1584876274283">
+    <state width="1443" height="66" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584891944566" />
+    <state width="1443" height="66" key="GridCell.Tab.1.center" timestamp="1584891944566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584876274283" />
-    <state width="1443" height="84" key="GridCell.Tab.1.left" timestamp="1584876274283">
+    <state width="1443" height="66" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584891944566" />
+    <state width="1443" height="66" key="GridCell.Tab.1.left" timestamp="1584891944566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584876274283" />
-    <state width="1443" height="84" key="GridCell.Tab.1.right" timestamp="1584876274284">
+    <state width="1443" height="66" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584891944566" />
+    <state width="1443" height="66" key="GridCell.Tab.1.right" timestamp="1584891944566">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584876274284" />
-    <state width="1443" height="84" key="GridCell.Tab.2.bottom" timestamp="1584876274283">
+    <state width="1443" height="66" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584891944566" />
+    <state width="1443" height="66" key="GridCell.Tab.2.bottom" timestamp="1584891944565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584876274283" />
-    <state width="1443" height="84" key="GridCell.Tab.2.center" timestamp="1584876274283">
+    <state width="1443" height="66" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584891944565" />
+    <state width="1443" height="66" key="GridCell.Tab.2.center" timestamp="1584891944565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584876274283" />
-    <state width="1443" height="84" key="GridCell.Tab.2.left" timestamp="1584876274283">
+    <state width="1443" height="66" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1584891944565" />
+    <state width="1443" height="66" key="GridCell.Tab.2.left" timestamp="1584891944565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584876274283" />
-    <state width="1443" height="84" key="GridCell.Tab.2.right" timestamp="1584876274283">
+    <state width="1443" height="66" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1584891944565" />
+    <state width="1443" height="66" key="GridCell.Tab.2.right" timestamp="1584891944565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1443" height="84" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584876274283" />
+    <state width="1443" height="66" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1584891944565" />
     <state width="1443" height="373" key="GridCell.Tab.3.bottom" timestamp="1584715776508">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -809,10 +654,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584876254245" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584803450532">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584876815950">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584803450532" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584876815950" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584844349957">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
