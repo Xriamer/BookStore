@@ -176,7 +176,7 @@
                         <li><a href="#" target="main">Power By Intellij IDEA</a></li>
                     </ul>
                 </div>
-                <h1 class="type"><a href="javascript:void(0)">雇员管理</a></h1>
+                <h1 class="type"><a href="javascript:void(0)">用户管理</a></h1>
                 <div class="content">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
@@ -184,10 +184,7 @@
                         </tr>
                     </table>
                     <ul class="MM">
-                        <li><a href="<%=basePath%>pages/back/admin/emp/EmpServlet/insertPre" target="main">增加雇员</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/emp/EmpServlet/list" target="main">雇员列表</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/emp/EmpServlet/listSplit" target="main">分页列表</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/emp/EmpServlet/listDetails" target="main">详细列表</a>
+                        <li><a href="<%=basePath%>pages/back/admin/member/MemberServletBack/list" target="main">用户列表</a></li>
                         </li>
                     </ul>
                 </div>

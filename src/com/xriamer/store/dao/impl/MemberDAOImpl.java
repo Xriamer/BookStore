@@ -7,6 +7,7 @@ import com.xriamer.utils.dao.AbstractDAOImpl;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -71,12 +72,35 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public List<Member> findAllSplit(Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception {
-        return null;
+        List<Member> all=new ArrayList<Member>();
+        String sql="SELECT mid,password,name,phone,address,code,regdate,photo,status FROM member WHERE "+ column +" LIKE ? LIMIT ? , ? ";
+        super.pstmt=super.conn.prepareStatement(sql);
+        super.pstmt.setString(1,"%" + keyWord + "%");
+        super.pstmt.setInt(2,(currentPage-1)*lineSize);
+        super.pstmt.setInt(3,lineSize);
+        ResultSet rs=super.pstmt.executeQuery();
+        while(rs.next()){
+            Member mb=new Member();
+            mb.setMid(rs.getString(1));
+            mb.setPassword(rs.getString(2));
+            mb.setName(rs.getString(3));
+            mb.setPhone(rs.getString(4));
+            mb.setAddress(rs.getString(5));
+            mb.setCode(rs.getString(6));
+            mb.setRegdate(rs.getTimestamp(7));
+            mb.setPhoto(rs.getString(8));
+            mb.setStatus(rs.getInt(9));
+            all.add(mb);
+        }
+        return all;
     }
 
     @Override
+    /**
+     * 数据个数统计
+     */
     public Integer getAllCount(String column, String keyWord) throws Exception {
-        return null;
+        return super.countHandle("member",column,keyWord);
     }
 
     @Override
