@@ -6,17 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/IMemberServiceBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/impl/MemberServiceBackImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/MemberServletBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/member/member_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/MemberDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceBackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceBackFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/back/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/back/admin/left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/split_page_plugin_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/split_page_plugin_search.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -318,7 +308,7 @@
       <workItem from="1584754811493" duration="13005000" />
       <workItem from="1584844225533" duration="26226000" />
       <workItem from="1584928891009" duration="11310000" />
-      <workItem from="1585026169390" duration="18492000" />
+      <workItem from="1585026169390" duration="18743000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -516,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584892050041</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="load user table.">
+      <created>1585069044743</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1585069044743</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +536,8 @@
     <MESSAGE value="Finish remember password and safety logout(clear cookie data) features." />
     <MESSAGE value="Finish admin user login." />
     <MESSAGE value="Fix admin user logout exception." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix admin user logout exception." />
+    <MESSAGE value="load user table." />
+    <option name="LAST_COMMIT_MESSAGE" value="load user table." />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="75" key="#Chrome_Settings" timestamp="1584446791465">
@@ -590,10 +588,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1584892048202">
+    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1585069042937">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1584892048202" />
+    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1585069042937" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -670,10 +668,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584876254245" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1584892067165">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1585069048388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1584892067165" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1585069048388" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585026267773">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
