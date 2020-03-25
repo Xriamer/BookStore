@@ -22,4 +22,18 @@ public class MemberServiceBackImpl implements IMemberServiceBack {
             this.dbc.close();
         }
     }
+
+    @Override
+    public Map<String, Object> listByStatus(int status,int currentPage, int lineSize,String column, String keyWord) throws Exception {
+        try {
+            Map<String,Object> map=new HashMap<String,Object>();
+            map.put("allMembers", DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findAllByStatus(status,currentPage,lineSize,column,keyWord));
+            map.put("memberCount",DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).getAllCountByStatus(status,column,keyWord));
+            return map;
+        }catch (Exception e){
+            throw e;
+        }finally{
+            this.dbc.close();
+        }
+    }
 }

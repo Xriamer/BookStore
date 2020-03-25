@@ -17,4 +17,20 @@ public interface IMemberServiceBack {
      * @throws Exception
      */
     public Map<String,Object> list(int currentPage, int lineSize,String column, String keyWord) throws Exception;
+
+    /**
+     * 进行全部用户的分页数据显示，要调用IMemberDAO的如下操作:<br>
+     *     <li>调用IMemberDAO.findAllByStatus()方法，查询全部数据</>
+     *     <li>调用IMemberDAO.findAllCountByStatus()方法，统计出全部数据量</li>
+     * @param column  模糊查询列
+     * @param keyWord  模糊查询关键字
+     * @param currentPage  当前所在页
+     * @param lineSize  每页所显示的数据量
+     * @param status  用户的状态
+     * @return  由于要返回的数据有list与Integer两种类型，所以使用Map返回，包含如下内容:<br>
+     *     <li>key=allMembers,value=findAllByStatus()</li>
+     *     <li>key=memberCount,value=getAllCountByStatus()</li>
+     * @throws Exception
+     */
+    public Map<String,Object> listByStatus(int status,int currentPage,int lineSize,String column,String keyWord) throws Exception;
 }

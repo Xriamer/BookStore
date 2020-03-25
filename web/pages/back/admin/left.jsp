@@ -185,6 +185,9 @@
                     </table>
                     <ul class="MM">
                         <li><a href="<%=basePath%>pages/back/admin/member/MemberServletBack/list" target="main">用户列表</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/member/MemberServletBack/listStatus?status=0" target="main">锁定用户</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/member/MemberServletBack/listStatus?status=1" target="main">激活用户</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/member/MemberServletBack/listStatus?status=2" target="main">未激活用户</a></li>
                         </li>
                     </ul>
                 </div>

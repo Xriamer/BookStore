@@ -2,6 +2,8 @@ package com.xriamer.store.dao;
 
 import com.xriamer.store.vo.Member;
 
+import java.util.List;
+
 public interface IMemberDAO extends IDAO<String, Member> {
 
 
@@ -41,4 +43,26 @@ public interface IMemberDAO extends IDAO<String, Member> {
      * @throws Exception
      */
     public boolean findLogin(Member mb) throws Exception;
+
+    /**
+     * 根据用户的的状态来进行数据的列表操作
+     * @param status
+     * @param currentPage
+     * @param lineSize
+     * @param column
+     * @param keyWord
+     * @return
+     * @throws Exception
+     */
+    public List<Member> findAllByStatus(Integer status,Integer currentPage,Integer lineSize,String column,String keyWord) throws Exception;
+
+    /**
+     * 根据用户的状态统计所有的数据量
+     * @param status
+     * @param column
+     * @param keyWord
+     * @return
+     * @throws Exception
+     */
+    public Integer getAllCountByStatus(Integer status,String column,String keyWord) throws Exception;
 }
