@@ -8,6 +8,7 @@
             + path + "/";
     String updateActiveUrl = basePath + "pages/back/admin/member/MemberServletBack/updateStatus?type=active";
     String updateLockUrl = basePath + "pages/back/admin/member/MemberServletBack/updateStatus?type=lock";
+    String showUrl=basePath+"pages/back/admin/member/MemberServletBack/show";
 
 %>
 <html>
@@ -37,7 +38,7 @@
             <c:forEach items="${allMembers}" var="member">
                 <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                     <td><input type="checkbox" id="mid" name="mid" value="${member.mid}"></td>
-                    <td>${member.mid}</td>
+                    <td><a href="<%=showUrl%>?mid=${member.mid}">${member.mid}</a></td>
                     <td>${member.name}</td>
                     <td>${member.phone}</td>
                     <td>${member.regdate}</td>

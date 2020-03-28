@@ -27,9 +27,32 @@ public class MemberServletBack extends HttpServlet {
                 path = this.listStatus(request);
             } else if ("updateStatus".equals(status)) {
                 path = this.updateStatus(request);
+            }else if("show".equalsIgnoreCase(status)){
+                path=this.show(request);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
+    }
+
+    private String show(HttpServletRequest request) {
+        String msg=null;
+        String url=null;
+        String referer=request.getHeader("referer");
+        String mid=request.getParameter("mid");
+        if(ValidateUtil.validateEmpty(mid)){
+            try {
+                request.setAttribute("member",ServiceBackFactory.getIMemberServiceBackInstance().show(mid));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "/pages/back/admin/member/member_show.jsp";
+        }else {
+            msg="您还未选择任何数据，或者是还未选择任何数据，请重新选择！";
+            url="/pages/back/admin/member/MemberServletBack"+referer.substring(referer.lastIndexOf("/"));
+            request.setAttribute("msg",msg);
+            request.setAttribute("url",url);
+            return "/pages/forward.jsp";
+        }
     }
 
     public String list(HttpServletRequest request) {

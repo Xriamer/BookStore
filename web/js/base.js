@@ -78,7 +78,7 @@ function deleteAll(url, paramName, eleName) {
     }
     if (count > 0) {	// 有要删除的数据
         if (window.confirm("确定要执行该操作吗？")) {
-             //console.log(url + "?" + paramName + "=" + data) ;
+             console.log(url + "?" + paramName + "=" + data) ;
             window.location = url + "&" + paramName + "=" + data;
         }
     } else {

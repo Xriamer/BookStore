@@ -1,5 +1,7 @@
 package com.xriamer.store.service.back;
 
+import com.xriamer.store.vo.Member;
+
 import java.util.Map;
 import java.util.Set;
 
@@ -51,4 +53,11 @@ public interface IMemberServiceBack {
      */
     public boolean updateLock(Set<String> ids) throws Exception;
 
+    /**
+     * 查看一个人员的完整信息
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    public Member show(String id) throws Exception;
 }

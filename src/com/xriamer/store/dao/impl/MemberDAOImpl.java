@@ -60,8 +60,9 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
             mb.setPhone(rs.getString(4));
             mb.setAddress(rs.getString(5));
             mb.setCode(rs.getString(6));
-            mb.setRegdate(rs.getTimestamp(7));
-            mb.setPhoto(rs.getString(8));
+            mb.setStatus(rs.getInt(7));
+            mb.setRegdate(rs.getTimestamp(8));
+            mb.setPhoto(rs.getString(9));
         }
         return mb;
     }

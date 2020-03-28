@@ -3,6 +3,7 @@ package com.xriamer.store.service.back.impl;
 import com.xriamer.store.dbc.DatabaseConnection;
 import com.xriamer.store.factory.DAOFactory;
 import com.xriamer.store.service.back.IMemberServiceBack;
+import com.xriamer.store.vo.Member;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -53,6 +54,17 @@ public class MemberServiceBackImpl implements IMemberServiceBack {
     public boolean updateLock(Set<String> ids) throws Exception {
         try {
             return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateStatus(ids,0);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public Member show(String id) throws Exception {
+        try {
+            return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).findById(id);
         }catch (Exception e){
             throw e;
         }finally {
