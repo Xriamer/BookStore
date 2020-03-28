@@ -1,6 +1,7 @@
 package com.xriamer.store.service.back;
 
 import java.util.Map;
+import java.util.Set;
 
 public interface IMemberServiceBack {
     /**
@@ -33,4 +34,21 @@ public interface IMemberServiceBack {
      * @throws Exception
      */
     public Map<String,Object> listByStatus(int status,int currentPage,int lineSize,String column,String keyWord) throws Exception;
+
+    /**
+     * 将用户状态更新为激活状态(status==1)
+     * @param ids
+     * @return
+     * @throws Exception
+     */
+    public boolean updateActive(Set<String> ids) throws Exception;
+
+    /**
+     * 将用户状态更新为锁定状态(status==0)
+     * @param ids
+     * @return
+     * @throws Exception
+     */
+    public boolean updateLock(Set<String> ids) throws Exception;
+
 }

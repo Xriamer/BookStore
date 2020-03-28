@@ -66,7 +66,7 @@ public class AdminLoginServletBack extends HttpServlet {
                 }
             } else {
                 msg = "输入的验证码错误，请重新输入!";
-                url = "/pages/back/login/jsp";
+                url = "/pages/back/login.jsp";
             }
         } else {
             msg = "管理员登录信息填写错误！";

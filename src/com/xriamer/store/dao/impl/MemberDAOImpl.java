@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -180,5 +181,28 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
             return rs.getInt(1);
         }
         return 0;
+    }
+
+    @Override
+    public boolean doUpdateStatus(Set<String> ids, Integer status) throws Exception {
+        if(ids.size()==0){
+            return false;
+        }
+        boolean flag=true;
+        String sql="UPDATE member SET status=? WHERE mid=?";
+        super.pstmt=super.conn.prepareStatement(sql);
+        Iterator<String> iter=ids.iterator();
+        while(iter.hasNext()){
+            super.pstmt.setInt(1,status);
+            super.pstmt.setString(2,iter.next());
+            super.pstmt.addBatch();//增加到批处理操作
+        }
+        int result []=super.pstmt.executeBatch();//执行批处理
+        for(int x=0;x<result.length;x++){
+            if(result[x]==0){
+                flag=false;
+            }
+        }
+        return true;
     }
 }

@@ -3,6 +3,7 @@ package com.xriamer.store.dao;
 import com.xriamer.store.vo.Member;
 
 import java.util.List;
+import java.util.Set;
 
 public interface IMemberDAO extends IDAO<String, Member> {
 
@@ -65,4 +66,13 @@ public interface IMemberDAO extends IDAO<String, Member> {
      * @throws Exception
      */
     public Integer getAllCountByStatus(Integer status,String column,String keyWord) throws Exception;
+
+    /**
+     * 是进行数据的批量更新，状态由外部设置
+     * @param ids
+     * @param status
+     * @return
+     * @throws Exception
+     */
+    public boolean doUpdateStatus(Set<String> ids,Integer status) throws Exception;
 }

@@ -6,6 +6,7 @@ import com.xriamer.store.service.back.IMemberServiceBack;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MemberServiceBackImpl implements IMemberServiceBack {
     private DatabaseConnection dbc=new DatabaseConnection();
@@ -33,6 +34,28 @@ public class MemberServiceBackImpl implements IMemberServiceBack {
         }catch (Exception e){
             throw e;
         }finally{
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public boolean updateActive(Set<String> ids) throws Exception {
+        try {
+            return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateStatus(ids,1);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public boolean updateLock(Set<String> ids) throws Exception {
+        try {
+            return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateStatus(ids,0);
+        }catch (Exception e){
+            throw e;
+        }finally {
             this.dbc.close();
         }
     }

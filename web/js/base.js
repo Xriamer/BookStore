@@ -50,6 +50,10 @@ function checkboxSelect(obj, eleName) {
     }
 }
 
+function updateAll(url,paramName,eleName) {
+    deleteAll(url,paramName,eleName);
+}
+
 // url：表示要删除的操作路径
 // paramName：表示要传递的参数名称
 // eleName：表示要取得数据的ID名称
@@ -73,12 +77,12 @@ function deleteAll(url, paramName, eleName) {
         }
     }
     if (count > 0) {	// 有要删除的数据
-        if (window.confirm("确定要删除这些数据吗？")) {
-            // console.log(url + "?" + paramName + "=" + data) ;
+        if (window.confirm("确定要执行该操作吗？")) {
+             //console.log(url + "?" + paramName + "=" + data) ;
             window.location = url + "&" + paramName + "=" + data;
         }
     } else {
-        alert("您还未选择任何要删除的数据！");
+        alert("您还未选择任何操作！");
     }
 }
 
