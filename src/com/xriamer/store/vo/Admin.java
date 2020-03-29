@@ -2,11 +2,21 @@ package com.xriamer.store.vo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Admin implements Serializable {
     private String aid;
     private String password;
     private Date lastdate;
+    private List<Books> books;
+
+    public List<Books> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Books> books) {
+        this.books = books;
+    }
 
     public String getAid() {
         return aid;

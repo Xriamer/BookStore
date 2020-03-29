@@ -50,8 +50,8 @@ function checkboxSelect(obj, eleName) {
     }
 }
 
-function updateAll(url,paramName,eleName) {
-    deleteAll(url,paramName,eleName);
+function updateAll(url, paramName, eleName) {
+    deleteAll(url, paramName, eleName);
 }
 
 // url：表示要删除的操作路径
@@ -78,7 +78,7 @@ function deleteAll(url, paramName, eleName) {
     }
     if (count > 0) {	// 有要删除的数据
         if (window.confirm("确定要执行该操作吗？")) {
-             console.log(url + "?" + paramName + "=" + data) ;
+            console.log(url + "?" + paramName + "=" + data);
             window.location = url + "&" + paramName + "=" + data;
         }
     } else {
@@ -96,4 +96,17 @@ function closePage() {
 
 function changeCode(obj) {	// 要修改显示的验证码
     obj.src = "pages/image.jsp?tm=" + Math.random();
+}
+
+function preview(file) {
+    var prevDiv = document.getElementById('preview');
+    if (file.files && file.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            prevDiv.innerHTML = '<img src="' + evt.target.result + '" />';
+        }
+        reader.readAsDataURL(file.files[0]);
+    } else {
+        prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+    }
 }

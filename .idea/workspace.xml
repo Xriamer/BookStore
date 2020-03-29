@@ -7,21 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IItemDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/ItemDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/IItemServiceBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/impl/ItemServiceBackImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/ItemServletBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/item/item_insert.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/item/item_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IBooksDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/BooksDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/IBooksServiceBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/service/back/impl/BooksServiceBackImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/BooksServletBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Books.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/books.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/back/admin/books/books_insert.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/factory/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/factory/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/factory/ServiceBackFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/factory/ServiceBackFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/servlet/back/ItemServletBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/servlet/back/ItemServletBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/vo/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/vo/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/vo/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/vo/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/pages/back/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/pages/back/admin/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/back/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/back/admin/left.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/factory/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/factory/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/factory/ServiceBackFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/factory/ServiceBackFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/servlet/back/ItemServletBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/servlet/back/ItemServletBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/vo/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/vo/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/vo/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/vo/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/pages/back/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/pages/back/admin/left.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/DAOFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceBackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/factory/ServiceBackFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/ItemServletBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/back/ItemServletBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/vo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/vo/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/back/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/back/admin/left.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,9 +51,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -71,7 +87,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/pages/back/admin/item" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/pages/back/admin/books" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -87,11 +103,11 @@
       <recent name="com.xriamer.store.servlet.back" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\pages\back\admin\books" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\pages\back\admin\item" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\pages\back\admin\member" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web" />
       <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\images" />
-      <recent name="D:\Users\Xriam\IdeaProjects\BookStore\web\css" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.BookStore">
@@ -278,7 +294,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -330,7 +346,7 @@
       <workItem from="1585138590416" duration="11480000" />
       <workItem from="1585286465589" duration="12737000" />
       <workItem from="1585358427408" duration="30990000" />
-      <workItem from="1585455031918" duration="14895000" />
+      <workItem from="1585455031918" duration="34022000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -563,7 +579,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585410692204</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Finish Book category manage.">
+      <created>1585473954720</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1585473954720</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Finish Book category manage.">
+      <created>1585473994142</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585473994142</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +619,8 @@
     <MESSAGE value="load user table." />
     <MESSAGE value="finish select user by status." />
     <MESSAGE value="Finish batch operation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish batch operation." />
+    <MESSAGE value="Finish Book category manage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Book category manage." />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="75" key="#Chrome_Settings" timestamp="1584446791465">
@@ -620,10 +651,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="885" y="321" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.834@0.0.1536.834" timestamp="1584707860970" />
-    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1585462982743">
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1585482780203">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1585462982743" />
+    <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1585482780203" />
     <state x="360" y="75" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584456772750">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -640,10 +671,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1585473952546">
+    <state x="474" y="10" key="CommitChangelistDialog2" timestamp="1585473991103">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1585473952546" />
+    <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1585473991103" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -652,54 +683,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="685" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584876026870" />
-    <state width="906" height="2" key="GridCell.Tab.0.bottom" timestamp="1585473784549">
+    <state width="1192" height="67" key="GridCell.Tab.0.bottom" timestamp="1585497235895">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1585473784549" />
-    <state width="906" height="2" key="GridCell.Tab.0.center" timestamp="1585473784548">
+    <state width="1192" height="67" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1585497235895" />
+    <state width="1192" height="67" key="GridCell.Tab.0.center" timestamp="1585497235894">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1585473784548" />
-    <state width="906" height="2" key="GridCell.Tab.0.left" timestamp="1585473784548">
+    <state width="1192" height="67" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1585497235894" />
+    <state width="1192" height="67" key="GridCell.Tab.0.left" timestamp="1585497235894">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1585473784548" />
-    <state width="906" height="2" key="GridCell.Tab.0.right" timestamp="1585473784549">
+    <state width="1192" height="67" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1585497235894" />
+    <state width="1192" height="67" key="GridCell.Tab.0.right" timestamp="1585497235894">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1585473784549" />
-    <state width="906" height="2" key="GridCell.Tab.1.bottom" timestamp="1585473784427">
+    <state width="1192" height="67" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1585497235894" />
+    <state width="1192" height="67" key="GridCell.Tab.1.bottom" timestamp="1585497235746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1585473784427" />
-    <state width="906" height="2" key="GridCell.Tab.1.center" timestamp="1585473784427">
+    <state width="1192" height="67" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1585497235746" />
+    <state width="1192" height="67" key="GridCell.Tab.1.center" timestamp="1585497235746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1585473784427" />
-    <state width="906" height="2" key="GridCell.Tab.1.left" timestamp="1585473784427">
+    <state width="1192" height="67" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1585497235746" />
+    <state width="1192" height="67" key="GridCell.Tab.1.left" timestamp="1585497235746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1585473784427" />
-    <state width="906" height="2" key="GridCell.Tab.1.right" timestamp="1585473784427">
+    <state width="1192" height="67" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1585497235746" />
+    <state width="1192" height="67" key="GridCell.Tab.1.right" timestamp="1585497235746">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1585473784427" />
-    <state width="906" height="2" key="GridCell.Tab.2.bottom" timestamp="1585473784428">
+    <state width="1192" height="67" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1585497235746" />
+    <state width="1192" height="67" key="GridCell.Tab.2.bottom" timestamp="1585497235747">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1585473784428" />
-    <state width="906" height="2" key="GridCell.Tab.2.center" timestamp="1585473784428">
+    <state width="1192" height="67" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1585497235747" />
+    <state width="1192" height="67" key="GridCell.Tab.2.center" timestamp="1585497235747">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1585473784428" />
-    <state width="906" height="2" key="GridCell.Tab.2.left" timestamp="1585473784428">
+    <state width="1192" height="67" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1585497235747" />
+    <state width="1192" height="67" key="GridCell.Tab.2.left" timestamp="1585497235747">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1585473784428" />
-    <state width="906" height="2" key="GridCell.Tab.2.right" timestamp="1585473784428">
+    <state width="1192" height="67" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1585497235747" />
+    <state width="1192" height="67" key="GridCell.Tab.2.right" timestamp="1585497235747">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="906" height="2" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1585473784428" />
+    <state width="1192" height="67" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1585497235747" />
     <state width="907" height="126" key="GridCell.Tab.3.bottom" timestamp="1585406623827">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -720,10 +751,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584876254245" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1585473958286">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1585473998854">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1585473958286" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1585473998854" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585455095762">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -732,6 +763,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="463" y="311" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.834@0.0.1536.834" timestamp="1584531063146" />
+    <state x="333" y="20" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585479730679">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="333" y="20" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1585479730679" />
     <state x="578" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585410938293">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -752,10 +787,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1584793361981" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1585471662832">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1585491610658">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1585471662832" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1585491610658" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
