@@ -191,7 +191,7 @@
                         </li>
                     </ul>
                 </div>
-                <h1 class="type"><a href="javascript:void(0)">部门管理</a></h1>
+                <h1 class="type"><a href="javascript:void(0)">图书管理</a></h1>
                 <div class="content">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
@@ -199,10 +199,10 @@
                         </tr>
                     </table>
                     <ul class="MM">
-                        <li><a href="<%=basePath%>pages/back/admin/dept/dept_insert.jsp" target="main">增加部门</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/dept/DeptServlet/list" target="main">部门列表</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/dept/DeptServlet/listDetails" target="main">详细列表</a>
-                        </li>
+                        <li><a href="<%=basePath%>pages/back/admin/item/item_insert.jsp" target="main">增加图书类型</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/item/ItemServletBack/list" target="main">分类列表</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/insert" target="main">增加商品</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/list" target="main">商品列表</a></li>
                     </ul>
                 </div>
                 <h1 class="type"><a href="javascript:void(0)">注册用户管理</a></h1>
