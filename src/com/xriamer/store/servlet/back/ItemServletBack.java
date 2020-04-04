@@ -42,7 +42,7 @@ public class ItemServletBack extends HttpServlet {
             Item it = new Item();
             it.setTitle(title);
             try {
-                if (ServiceBackFactory.getIItemServiceBack().insert(it)) {
+                if (ServiceBackFactory.getIItemServiceBackInstance().insert(it)) {
                     msg = "图书分类信息增加成功！";
                 } else {
                     msg = "图书分类增加失败，请确认输入是否正确";
@@ -70,7 +70,7 @@ public class ItemServletBack extends HttpServlet {
             it.setIid(Integer.parseInt(iid));
             it.setTitle(title);
             try {
-                if (ServiceBackFactory.getIItemServiceBack().update(it)) {
+                if (ServiceBackFactory.getIItemServiceBackInstance().update(it)) {
                     msg = "图书分类信息更新成功！";
                 } else {
                     msg = "图书分类信息更新失败！";
@@ -98,7 +98,7 @@ public class ItemServletBack extends HttpServlet {
                 all.add(Integer.parseInt(result[x]));
             }
             try {
-                if (ServiceBackFactory.getIItemServiceBack().delete(all)) {
+                if (ServiceBackFactory.getIItemServiceBackInstance().delete(all)) {
                     msg = "图书分类信息删除成功！";
                 } else {
                     msg = "图书分类信息删除失败！";
@@ -117,7 +117,7 @@ public class ItemServletBack extends HttpServlet {
 
     private String list(HttpServletRequest request) {
         try {
-            request.setAttribute("allItems", ServiceBackFactory.getIItemServiceBack().list());
+            request.setAttribute("allItems", ServiceBackFactory.getIItemServiceBackInstance().list());
         } catch (Exception e) {
             e.printStackTrace();
         }

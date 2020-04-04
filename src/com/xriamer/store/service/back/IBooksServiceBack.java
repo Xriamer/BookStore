@@ -21,4 +21,19 @@ public interface IBooksServiceBack {
      * @throws Exception
      */
     public boolean insert(Books book)throws Exception;
+
+    /**
+     * 图书信息的基础列表操作,调用如下的方法:<br>
+     *     <li>调用iBooksDAO.findAll()方法查询所有的图书信息</li>
+     *     <li>调用IBooksDAO.getAllCount()方法统计全部数据量</li>
+     * @param currentPage
+     * @param lineSize
+     * @param column
+     * @param keyWord
+     * @return  以Map集合返回,包括如下内容:<br>
+     *     <li>key=allBooks,value=IbooksDAO.findAll()</li>
+     *     <li>key=allBooks,value=IbooksDAO.findAll()</li>
+     * @throws Exception
+     */
+    public Map<String,Object> list(int currentPage,int lineSize,String column,String keyWord) throws Exception;
 }

@@ -40,7 +40,7 @@
                 </tr>
             </c:forEach>
         </table>
-        <input type="button" value="删除商品分类信息" onclick="deleteAll('<%=deleteUrl%>>','ids','tiid')">
+        <input type="button" value="删除图书分类信息" onclick="deleteAll('<%=deleteUrl%>>','ids','tiid')">
     </c:if>
 </div>
 <form id="itemForm" method="post" action="<%=updateUrl%>">

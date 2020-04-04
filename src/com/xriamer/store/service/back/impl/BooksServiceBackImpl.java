@@ -25,13 +25,30 @@ public class BooksServiceBackImpl implements IBooksServiceBack {
     }
 
     @Override
-    public boolean insert(Books book) throws Exception {
+    public boolean insert(Books books) throws Exception {
         try {
-            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doCreate(book);
+            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doCreate(books);
         } catch (Exception e) {
             throw e;
         } finally {
             this.dbc.close();
         }
     }
+
+    @Override
+    public Map<String, Object> list(int currentPage, int lineSize, String column, String keyWord) throws Exception {
+        try {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("allBooks", DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).findAllSplit(currentPage
+                    , lineSize, column, keyWord));
+            map.put("booksCount", DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).getAllCount(column, keyWord));
+            return map;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+
 }

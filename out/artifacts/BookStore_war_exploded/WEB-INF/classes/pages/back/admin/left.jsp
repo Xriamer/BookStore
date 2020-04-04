@@ -201,8 +201,8 @@
                     <ul class="MM">
                         <li><a href="<%=basePath%>pages/back/admin/item/item_insert.jsp" target="main">增加图书类型</a></li>
                         <li><a href="<%=basePath%>pages/back/admin/item/ItemServletBack/list" target="main">分类列表</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/insertPre" target="main">增加商品</a></li>
-                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/list" target="main">商品列表</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/insertPre" target="main">增加图书</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/list" target="main">图书列表</a></li>
                     </ul>
                 </div>
                 <h1 class="type"><a href="javascript:void(0)">注册用户管理</a></h1>

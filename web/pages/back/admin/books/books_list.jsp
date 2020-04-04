@@ -1,0 +1,78 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+    String updateUpUrl = basePath + "pages/back/admin/books/BooksServletBack/updateStatus?type=up";
+    String updateDownUrl = basePath + "pages/back/admin/books/BooksServletBack/updateStatus?type=down";
+    String updatePreUrl = basePath + "pages/back/admin/books/BooksServletBack/updatePre";
+    String deleteUrl = basePath + "pages/back/admin/books/BooksServletBack/delete";
+%>
+<html>
+<head>
+    <base href="<%=basePath%>">
+    <title>在线书城</title>
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <script type="text/javascript" src="js/base.js"></script>
+</head>
+<body>
+<div id="mainDiv">
+    <h1>图书列表</h1>
+    <c:if test="${allBooks != null}" var="books">
+        <div id="splitSearchDiv">
+            <jsp:include page="/pages/split_page_plugin_search.jsp"/>
+            <br>
+        </div>
+        <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" width="100%">
+            <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
+                <td><input type="checkbox" onclick="checkboxSelect(this,'bid')"></td>
+                <td>图片</td>
+                <td>书名</td>
+                <td>作者</td>
+                <td>出版社</td>
+                <td>ISBN版号</td>
+                <td>发布日期</td>
+                <td>库存</td>
+                <td>访问量</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+            <c:forEach items="${allBooks}" var="books">
+                <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
+                    <td><input type="checkbox" id="bid" name="bid" value="${books.bid}:${books.photo}"></td>
+                    <td><img src="upload/books/${books.photo}" style="width:50px;height:50px;"></td>
+                    <td>${books.title}</td>
+                    <td>${books.writer}</td>
+                    <td>${books.publisher}</td>
+                    <td>${books.isbn}</td>
+                    <td>${books.pubdate}</td>
+                    <td>${books.amount}</td>
+                    <td>${books.bow}</td>
+                    <td>
+                        <c:if test="${books.status == 0}">
+                            下架
+                        </c:if>
+                        <c:if test="${books.status == 1}">
+                            上架
+                        </c:if>
+                    </td>
+                    <td>
+                        修改
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+        <input type="button" value="批量上架" onclick="updateAll('<%=updateUpUrl%>','ids','bid')">
+        <input type="button" value="批量下架" onclick="updateAll('<%=updateDownUrl%>','ids','bid')">
+        <input type="button" value="移到回收站" onclick="deleteAll('<%=deleteUrl%>','ids','bid')">
+        <div id="splitBarDiv" style="float:right">
+            <jsp:include page="/pages/split_page_plugin_bars.jsp"/>
+        </div>
+    </c:if>
+</div>
+<%--<h1><a href="<%=updateStatusUrl%>">批量更新</a></h1>--%>
+</body>
+</html>

@@ -18,10 +18,10 @@ public class ServiceBackFactory {
         return new MemberServiceBackImpl();
     }
 
-    public static IItemServiceBack getIItemServiceBack() {
+    public static IItemServiceBack getIItemServiceBackInstance() {
         return new ItemServiceBackImpl();
     }
 
-    public static IBooksServiceBack getIBookServiceBack(){return new BooksServiceBackImpl();
+    public static IBooksServiceBack getIBookServiceBackInstance(){return new BooksServiceBackImpl();
     }
 }
