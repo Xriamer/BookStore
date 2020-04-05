@@ -8,6 +8,7 @@
             + path + "/";
     String updateUpUrl = basePath + "pages/back/admin/books/BooksServletBack/updateStatus?type=up";
     String updateDownUrl = basePath + "pages/back/admin/books/BooksServletBack/updateStatus?type=down";
+    String updateDeleteUrl = basePath + "pages/back/admin/books/BooksServletBack/updateStatus?type=delete";
     String updatePreUrl = basePath + "pages/back/admin/books/BooksServletBack/updatePre";
     String deleteUrl = basePath + "pages/back/admin/books/BooksServletBack/delete";
 %>
@@ -65,9 +66,18 @@
                 </tr>
             </c:forEach>
         </table>
-        <input type="button" value="批量上架" onclick="updateAll('<%=updateUpUrl%>','ids','bid')">
-        <input type="button" value="批量下架" onclick="updateAll('<%=updateDownUrl%>','ids','bid')">
-        <input type="button" value="移到回收站" onclick="deleteAll('<%=deleteUrl%>','ids','bid')">
+        <c:if test="${param.status!=1}">
+            <input type="button" value="批量上架" onclick="updateAll('<%=updateUpUrl%>','ids','bid')">
+        </c:if>
+        <c:if test="${param.status!=0}">
+            <input type="button" value="批量下架" onclick="updateAll('<%=updateDownUrl%>','ids','bid')">
+        </c:if>
+        <c:if test="${param.status!=2}">
+            <input type="button" value="移到回收站" onclick="deleteAll('<%=updateDeleteUrl%>','ids','bid')">
+        </c:if>
+        <c:if test="${param.status==2}">
+            <input type="button" value="彻底删除" onclick="deleteAll('<%=deleteUrl%>','ids','bid')">
+        </c:if>
         <div id="splitBarDiv" style="float:right">
             <jsp:include page="/pages/split_page_plugin_bars.jsp"/>
         </div>

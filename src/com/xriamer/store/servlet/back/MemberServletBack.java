@@ -219,7 +219,7 @@ public class MemberServletBack extends HttpServlet {
         request.setAttribute("columnData", columnData);
         request.setAttribute("url", "/pages/back/admin/member/MemberServletBack/list");
         request.setAttribute("paramName", "status");
-        request.setAttribute("paramValue", status);
+        request.setAttribute("paramValue", String.valueOf(status));
         return "/pages/back/admin/member/member_list.jsp";
     }
 

@@ -30,6 +30,8 @@ public class BooksServletBack extends HttpServlet {
                 path = this.insert(request, response);
             } else if ("list".equals(status)) {
                 path = this.list(request);
+            } else if ("listStatus".equals(status)) {
+                path = this.listStatus(request);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
@@ -169,6 +171,47 @@ public class BooksServletBack extends HttpServlet {
         request.setAttribute("keyWord", keyWord);
         request.setAttribute("columnData", columnData);
         request.setAttribute("url", "/pages/back/admin/books/BooksServletBack/list");
+        return "/pages/back/admin/books/books_list.jsp";
+    }
+
+    public String listStatus(HttpServletRequest request) {
+        int currentPage = 1;
+        int lineSize = 10;
+        String column = null;
+        String keyWord = null;
+        String columnData = "图书名称:title|作者:writer|出版社:publisher|发布管理员:aid";
+        try {
+            currentPage = Integer.parseInt(request.getParameter("cp"));
+        } catch (Exception e) {
+        }
+        try {
+            lineSize = Integer.parseInt(request.getParameter("ls"));
+        } catch (Exception e) {
+        }
+        column = request.getParameter("col");
+        keyWord = request.getParameter("kw");
+        if (column == null) {
+            column = "title";
+        }
+        if (keyWord == null) {
+            keyWord = "";//表示查询全部
+        }
+        int status = Integer.parseInt(request.getParameter("status"));//接收状态
+        try {
+            Map<String, Object> map = ServiceBackFactory.getIBookServiceBackInstance().listStatus(status, currentPage, lineSize, column, keyWord);
+            request.setAttribute("allBooks", map.get("allBooks"));
+            request.setAttribute("allRecorders", map.get("BooksCount"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("currentPage", currentPage);
+        request.setAttribute("lineSize", lineSize);
+        request.setAttribute("column", column);
+        request.setAttribute("keyWord", keyWord);
+        request.setAttribute("columnData", columnData);
+        request.setAttribute("url", "/pages/back/admin/books/BooksServletBack/listStatus");
+        request.setAttribute("paramName", "status");
+        request.setAttribute("paramValue", String.valueOf(status));
         return "/pages/back/admin/books/books_list.jsp";
     }
 
