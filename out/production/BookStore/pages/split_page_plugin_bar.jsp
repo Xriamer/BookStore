@@ -20,8 +20,8 @@
     int allRecorders = 0;
     int pageSize = 0;
     int lsData[] = new int[]{1, 5, 10, 15, 20, 30, 50, 100};
-    String paramName = request.getParameter("paramName");
-    String paramValue = request.getParameter("paramValue");
+    String paramName = (String) request.getAttribute("paramName");
+    String paramValue = (String) request.getAttribute("paramValue");
 %>
 
 <% // 接收传递的参数

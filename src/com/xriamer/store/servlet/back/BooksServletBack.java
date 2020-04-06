@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @WebServlet(name = "BooksServletBack", urlPatterns = "/pages/back/admin/books/BooksServletBack/*")
 public class BooksServletBack extends HttpServlet {
@@ -32,6 +30,8 @@ public class BooksServletBack extends HttpServlet {
                 path = this.list(request);
             } else if ("listStatus".equals(status)) {
                 path = this.listStatus(request);
+            } else if ("updateStatus".equals(status)) {
+                path = this.updateStatus(request);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
@@ -213,6 +213,47 @@ public class BooksServletBack extends HttpServlet {
         request.setAttribute("paramName", "status");
         request.setAttribute("paramValue", String.valueOf(status));
         return "/pages/back/admin/books/books_list.jsp";
+    }
+
+    public String updateStatus(HttpServletRequest request) {
+        String msg = null;
+        String url = null;
+        String referer = request.getHeader("referer"); //取之前的数据
+        String type = request.getParameter("type");      //区分类型
+        String ids = request.getParameter("ids");
+        if (ValidateUtil.validateEmpty(ids)) {
+            String result[] = ids.split("\\|");  //数据组成 id:photo
+            Set<Integer> all = new HashSet<Integer>();
+            for (int x = 0; x < result.length; x++) {
+                String temp[] = result[x].split(":");
+                all.add(Integer.parseInt(temp[0]));    //id
+            }
+            boolean flag = false;  //保存最终的操作状态
+            try {
+                if ("up".equals(type)) {
+                    flag = ServiceBackFactory.getIBookServiceBackInstance().updateUp(all);
+                }
+                if ("down".equals(type)) {
+                    flag = ServiceBackFactory.getIBookServiceBackInstance().updateDown(all);
+                }
+                if ("delete".equals(type)) {
+                    flag = ServiceBackFactory.getIBookServiceBackInstance().updateDelete(all);
+                }
+                if (flag) {
+                    msg = "图书状态更新成功";
+                } else {
+                    msg = "图书状态更新失败";
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            msg = "要更新的数据有错误，请重新操作";
+        }
+        url = "/pages/back/admin/books/BooksServletBack" + referer.substring(referer.lastIndexOf("/"));
+        request.setAttribute("msg", msg);
+        request.setAttribute("url", url);
+        return "/pages/forward.jsp";
     }
 
 }

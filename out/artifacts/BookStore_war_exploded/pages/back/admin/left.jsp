@@ -203,6 +203,9 @@
                         <li><a href="<%=basePath%>pages/back/admin/item/ItemServletBack/list" target="main">分类列表</a></li>
                         <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/insertPre" target="main">增加图书</a></li>
                         <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/list" target="main">图书列表</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/listStatus?status=1" target="main">上架图书</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/listStatus?status=0" target="main">下架图书</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/listStatus?status=2" target="main">删除图书</a></li>
                     </ul>
                 </div>
                 <h1 class="type"><a href="javascript:void(0)">注册用户管理</a></h1>

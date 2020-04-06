@@ -22,7 +22,7 @@
 <body>
 <div id="mainDiv">
     <h1>图书列表</h1>
-    <c:if test="${allBooks != null}" var="books">
+    <c:if test="${allBooks != null}" var="res">
         <div id="splitSearchDiv">
             <jsp:include page="/pages/split_page_plugin_search.jsp"/>
             <br>
@@ -59,6 +59,9 @@
                         <c:if test="${books.status == 1}">
                             上架
                         </c:if>
+                        <c:if test="${books.status == 2}">
+                            回收站
+                        </c:if>
                     </td>
                     <td>
                         修改
@@ -67,10 +70,10 @@
             </c:forEach>
         </table>
         <c:if test="${param.status!=1}">
-            <input type="button" value="批量上架" onclick="updateAll('<%=updateUpUrl%>','ids','bid')">
+            <input type="button" value="批量上架" onclick="deleteAll('<%=updateUpUrl%>','ids','bid')">
         </c:if>
         <c:if test="${param.status!=0}">
-            <input type="button" value="批量下架" onclick="updateAll('<%=updateDownUrl%>','ids','bid')">
+            <input type="button" value="批量下架" onclick="deleteAll('<%=updateDownUrl%>','ids','bid')">
         </c:if>
         <c:if test="${param.status!=2}">
             <input type="button" value="移到回收站" onclick="deleteAll('<%=updateDeleteUrl%>','ids','bid')">
@@ -83,6 +86,5 @@
         </div>
     </c:if>
 </div>
-<%--<h1><a href="<%=updateStatusUrl%>">批量更新</a></h1>--%>
 </body>
 </html>

@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -61,20 +62,20 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
 
     @Override
     public List<Books> findAllSplit(Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception {
-        List<Books> all=new ArrayList<Books>();
-        String sql="SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE "+ column + " LIKE ? AND status<>2 LIMIT ? , ?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%"+ keyWord +"%");
-        super.pstmt.setInt(2,(currentPage-1)*lineSize);
-        super.pstmt.setInt(3,lineSize);
-        ResultSet rs=super.pstmt.executeQuery();
-        while(rs.next()){
-            Books books=new Books();
+        List<Books> all = new ArrayList<Books>();
+        String sql = "SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE " + column + " LIKE ? AND status<>2 LIMIT ? , ?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, (currentPage - 1) * lineSize);
+        super.pstmt.setInt(3, lineSize);
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Books books = new Books();
             books.setBid(rs.getInt(1));
-            Item item=new Item();
+            Item item = new Item();
             item.setIid(rs.getInt(2));
             books.setItem(item);
-            Admin admin=new Admin();
+            Admin admin = new Admin();
             admin.setAid(rs.getString(3));
             books.setAdmin(admin);
             books.setTitle(rs.getString(4));
@@ -95,11 +96,11 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
 
     @Override
     public Integer getAllCount(String column, String keyWord) throws Exception {
-        String sql="SELECT COUNT(*) FROM books WHERE "+column+" LIKE ? AND status<>2";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%"+keyWord+"%");
-        ResultSet rs=super.pstmt.executeQuery();
-        if(rs.next()){
+        String sql = "SELECT COUNT(*) FROM books WHERE " + column + " LIKE ? AND status<>2";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
             return rs.getInt(1);
         }
         return 0;
@@ -107,21 +108,21 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
 
     @Override
     public List<Books> findAllByStatus(Integer status, Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception {
-        List<Books> all=new ArrayList<Books>();
-        String sql="SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE "+ column + " LIKE ? AND status=? LIMIT ? , ?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%"+ keyWord +"%");
-        super.pstmt.setInt(2,status);
-        super.pstmt.setInt(3,(currentPage-1)*lineSize);
-        super.pstmt.setInt(4,lineSize);
-        ResultSet rs=super.pstmt.executeQuery();
-        while(rs.next()){
-            Books books=new Books();
+        List<Books> all = new ArrayList<Books>();
+        String sql = "SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE " + column + " LIKE ? AND status=? LIMIT ? , ?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, status);
+        super.pstmt.setInt(3, (currentPage - 1) * lineSize);
+        super.pstmt.setInt(4, lineSize);
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Books books = new Books();
             books.setBid(rs.getInt(1));
-            Item item=new Item();
+            Item item = new Item();
             item.setIid(rs.getInt(2));
             books.setItem(item);
-            Admin admin=new Admin();
+            Admin admin = new Admin();
             admin.setAid(rs.getString(3));
             books.setAdmin(admin);
             books.setTitle(rs.getString(4));
@@ -142,14 +143,34 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
 
     @Override
     public Integer getAllCountByStatus(Integer status, String column, String keyWord) throws Exception {
-        String sql="SELECT COUNT(*) FROM books WHERE "+column+" LIKE ? AND status=?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%"+keyWord+"%");
-        super.pstmt.setInt(2,status);
-        ResultSet rs=super.pstmt.executeQuery();
-        if(rs.next()){
+        String sql = "SELECT COUNT(*) FROM books WHERE " + column + " LIKE ? AND status=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, status);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
             return rs.getInt(1);
         }
         return 0;
+    }
+
+    @Override
+    public boolean doUpdateStatus(Set<Integer> id, Integer status) throws Exception {
+        String sql = "UPDATE books SET status=? WHERE bid=?";
+        Iterator<Integer> iter = id.iterator();
+        super.pstmt = super.conn.prepareStatement(sql);
+        while (iter.hasNext()) {
+            super.pstmt.setInt(1, status);
+            super.pstmt.setInt(2, iter.next());
+            super.pstmt.addBatch();
+        }
+        boolean flag = true;
+        int result [] = super.pstmt.executeBatch();
+        for (int x = 0; x < result.length; x++) {
+            if (result[x] == 0) {
+                flag = false;
+            }
+        }
+        return true;
     }
 }

@@ -3,6 +3,7 @@ package com.xriamer.store.service.back;
 import com.xriamer.store.vo.Books;
 
 import java.util.Map;
+import java.util.Set;
 
 public interface IBooksServiceBack {
     /**
@@ -41,4 +42,10 @@ public interface IBooksServiceBack {
     public Map<String, Object> list(int currentPage, int lineSize, String column, String keyWord) throws Exception;
 
     public Map<String, Object> listStatus(int status, int currentPage, int lineSize, String column, String keyWord) throws Exception;
+
+    public boolean updateUp(Set<Integer> bid) throws Exception;
+
+    public boolean updateDown(Set<Integer> bid) throws Exception;
+
+    public boolean updateDelete(Set<Integer> bid) throws Exception;
 }

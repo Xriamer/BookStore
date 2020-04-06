@@ -7,6 +7,7 @@ import com.xriamer.store.vo.Books;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class BooksServiceBackImpl implements IBooksServiceBack {
     private DatabaseConnection dbc = new DatabaseConnection();
@@ -58,6 +59,40 @@ public class BooksServiceBackImpl implements IBooksServiceBack {
                     , lineSize, column, keyWord));
             map.put("booksCount", DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).getAllCountByStatus(status, column, keyWord));
             return map;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+
+    @Override
+    public boolean updateUp(Set<Integer> bid) throws Exception {
+        try {
+            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doUpdateStatus(bid, 1);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public boolean updateDown(Set<Integer> bid) throws Exception {
+        try {
+            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doUpdateStatus(bid, 0);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public boolean updateDelete(Set<Integer> bid) throws Exception {
+        try {
+            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doUpdateStatus(bid, 2);
         } catch (Exception e) {
             throw e;
         } finally {
