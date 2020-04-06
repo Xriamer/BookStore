@@ -125,5 +125,33 @@ public class BooksServiceBackImpl implements IBooksServiceBack {
         }
     }
 
+    @Override
+    public Map<String, Object> deleteAll(Set<Integer> ids) throws Exception {
+        try {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("allPhotos", DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).findAllByPhoto(ids));
+            map.put("flag", DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doRemoveBatch(ids));
+            return map;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    /**
+     * 因为图片已经由前端传来，所以可以直接根据编号删除
+     */
+    public boolean delete(Set<Integer> id) throws Exception {
+        try {
+            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doRemoveBatch(id);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
 
 }

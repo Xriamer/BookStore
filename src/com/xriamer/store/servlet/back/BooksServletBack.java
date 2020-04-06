@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -36,9 +37,58 @@ public class BooksServletBack extends HttpServlet {
                 path = this.updatePre(request);
             } else if ("update".equals(status)) {
                 path = this.update(request, response);
+            } else if ("delete".equals(status)) {
+                path = this.delete(request);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
+    }
+
+    private String delete(HttpServletRequest request) {
+        String msg = null;
+        String url = null;
+        String referer = request.getHeader("referer"); //取之前的数据
+        String type = request.getParameter("type");    //区分类型
+        String ids = request.getParameter("ids");      //包含有"id:photo"信息
+        if (ValidateUtil.validateEmpty(ids)) {
+            Set<Integer> allIds = new HashSet<Integer>();
+            Set<String> allPhotos = new HashSet<String>();
+            String result[] = ids.split("\\|");
+            for (int x = 0; x < result.length; x++) {
+                String temp[] = result[x].split(":");
+                allIds.add(Integer.parseInt(temp[0]));
+                if (!"nophoto.jpg".equals(temp[1])) {
+                    allPhotos.add(temp[1]);
+                }
+            }
+            System.out.println("----"+allIds);
+            System.out.println("----"+allPhotos);
+            try {
+                if (ServiceBackFactory.getIBookServiceBackInstance().delete(allIds)) {
+                    if (allPhotos.size() > 0) {
+                        Iterator<String> iter = allPhotos.iterator();
+                        while (iter.hasNext()) {
+                            String filePath = super.getServletContext().getRealPath("upload/books/") + iter.next();
+                            File file = new File(filePath);
+                            if (file.exists()) {
+                                file.delete();
+                            }
+                        }
+                    }
+                    msg = "图书信息删除成功!";
+                } else {
+                    msg = "图书信息删除失败!";
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            msg = "要删除的数据有错误，请重新操作";
+        }
+        url = "/pages/back/admin/books/BooksServletBack" + referer.substring(referer.lastIndexOf("/"));
+        request.setAttribute("msg", msg);
+        request.setAttribute("url", url);
+        return "/pages/forward.jsp";
     }
 
     public String insert(HttpServletRequest request, HttpServletResponse response) {

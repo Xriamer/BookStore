@@ -11,4 +11,6 @@ public interface IBooksDAO extends IDAO<Integer, Books> {
     public Integer getAllCountByStatus(Integer status, String column, String keyWord) throws Exception;
 
     public boolean doUpdateStatus(Set<Integer> id, Integer status) throws Exception;
+
+    public Set<String> findAllByPhoto(Set<Integer> id) throws Exception;
 }

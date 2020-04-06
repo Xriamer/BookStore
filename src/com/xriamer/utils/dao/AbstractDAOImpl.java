@@ -1,8 +1,10 @@
 package com.xriamer.utils.dao;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -57,5 +59,33 @@ public abstract class AbstractDAOImpl {
             return rs.getInt(1);
         }
         return 0;
+    }
+
+    /**
+     * 负责遍历图片信息
+     *
+     * @param table       要查询的表
+     * @param photoColumn 要查询的照片字段
+     * @param column      要查询的列
+     * @param ids         要查询的id
+     * @return 返回图片数据
+     * @throws Exception
+     */
+    public Set<String> photoHandle(String table, String photoColumn, String column, Set<?> ids) throws Exception {
+        Set<String> all = new HashSet<String>();
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT").append(photoColumn).append(" FORM ").append(table).append(" WHERE ").append(column).append(" IN (");
+        Iterator<?> iter = ids.iterator();
+        while (iter.hasNext()) {
+            sql.append(iter.next()).append(",");
+        }
+        sql.delete(sql.length() - 1, sql.length()).append(")");
+        sql.append(" AND ").append(photoColumn).append("<>'nophoto.jpg'");
+        this.pstmt = this.conn.prepareStatement(sql.toString());
+        ResultSet rs = this.pstmt.executeQuery();
+        while (rs.next()) {
+            all.add(rs.getString(1));
+        }
+        return all;
     }
 }

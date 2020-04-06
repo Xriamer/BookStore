@@ -62,4 +62,24 @@ public interface IBooksServiceBack {
     public Map<String, Object> updatePre(int bid) throws Exception;
 
     public boolean update(Books books) throws Exception;
+
+    /**
+     * 执行数据的删除操作，但是在删除之后要清除对应的图片信息
+     *
+     * @param ids
+     * @return 返回的数据包含有两项内容 <br>
+     * <li>key=flag、value=IbooksDAO.doRemoveBatch()</>
+     * <li>key=allPhotos、value=IbooksDAO.findAllByPhoto()</>
+     * @throws Exception
+     */
+    public Map<String, Object> deleteAll(Set<Integer> ids) throws Exception;
+
+    /**
+     * 根据编号删除信息
+     *
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    public boolean delete(Set<Integer> id) throws Exception;
 }

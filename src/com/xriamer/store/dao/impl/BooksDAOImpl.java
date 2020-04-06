@@ -60,7 +60,7 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
 
     @Override
     public boolean doRemoveBatch(Set<Integer> ids) throws Exception {
-        return false;
+        return super.removeHandle("books", "bid", ids);
     }
 
     @Override
@@ -211,5 +211,13 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
             }
         }
         return true;
+    }
+
+    @Override
+    public Set<String> findAllByPhoto(Set<Integer> id) throws Exception {
+        if (id.size() > 0) {
+            return super.photoHandle("books", "photo", "bid", id);
+        }
+        return null;
     }
 }
