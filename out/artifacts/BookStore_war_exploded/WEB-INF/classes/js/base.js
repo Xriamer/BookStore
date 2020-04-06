@@ -50,10 +50,6 @@ function checkboxSelect(obj, eleName) {
     }
 }
 
-function updateAll(url, paramName, eleName) {
-    deleteAll(url, paramName, eleName);
-}
-
 // url：表示要删除的操作路径
 // paramName：表示要传递的参数名称
 // eleName：表示要取得数据的ID名称

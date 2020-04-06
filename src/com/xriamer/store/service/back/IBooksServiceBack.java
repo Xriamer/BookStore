@@ -48,4 +48,18 @@ public interface IBooksServiceBack {
     public boolean updateDown(Set<Integer> bid) throws Exception;
 
     public boolean updateDelete(Set<Integer> bid) throws Exception;
+
+    /**
+     * 图书修改前的数据查询操作，要查询出所有的栏目信息：
+     * <li>调用IItemDAO.finaAll()方法查询出所有的分类 </li>
+     * <li>调用IItemDAO.findById()方法查询出所有的分类 </li>
+     *
+     * @return 数据以Map集合形式返回，包含有以下内容:<br>
+     * <li>key= allItems,value=IItemDAO.findAll()返回值</li>
+     * <li>key= books,value=IBooksDAO.findById()返回值</li>
+     * @throws Exception
+     */
+    public Map<String, Object> updatePre(int bid) throws Exception;
+
+    public boolean update(Books books) throws Exception;
 }

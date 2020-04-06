@@ -32,12 +32,16 @@ public class BooksServletBack extends HttpServlet {
                 path = this.listStatus(request);
             } else if ("updateStatus".equals(status)) {
                 path = this.updateStatus(request);
+            } else if ("updatePre".equals(status)) {
+                path = this.updatePre(request);
+            } else if ("update".equals(status)) {
+                path = this.update(request, response);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
     }
 
-    private String insert(HttpServletRequest request, HttpServletResponse response) {
+    public String insert(HttpServletRequest request, HttpServletResponse response) {
         String msg = null;
         String url = null;
         SmartUpload smart = new SmartUpload();
@@ -121,7 +125,7 @@ public class BooksServletBack extends HttpServlet {
         return "/pages/forward.jsp";
     }
 
-    private String insertPre(HttpServletRequest request) {
+    public String insertPre(HttpServletRequest request) {
         try {
             Map<String, Object> map = ServiceBackFactory.getIBookServiceBackInstance().insertPre();
             request.setAttribute("allItems", map.get("allItems"));
@@ -129,6 +133,113 @@ public class BooksServletBack extends HttpServlet {
             e.printStackTrace();
         }
         return "/pages/back/admin/books/books_insert.jsp";
+    }
+
+    public String updatePre(HttpServletRequest request) {
+        String bid = request.getParameter("bid");
+        String referer = request.getHeader("referer"); //取之前的数据
+        if (ValidateUtil.validateEmpty(bid)) {
+            try {
+                Map<String, Object> map = ServiceBackFactory.getIBookServiceBackInstance().updatePre(Integer.parseInt(bid));
+                request.setAttribute("allItems", map.get("allItems"));
+                request.setAttribute("books", map.get("books"));
+                request.setAttribute("back", "/pages/back/admin/books/BooksServletBack" + referer.substring(referer.lastIndexOf("/")));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "/pages/back/admin/books/books_update.jsp";
+        } else {
+            request.setAttribute("msg", "还未选择要更新的数据，请重新确认！");
+            request.setAttribute("url", "/pages/back/admin/books/BooksServletBack" + referer.substring(referer.lastIndexOf("/")));
+            return "/pages/forward.jsp";
+        }
+    }
+
+    public String update(HttpServletRequest request, HttpServletResponse response) {
+        String msg = null;
+        String url = null;
+        SmartUpload smart = new SmartUpload();
+        try {
+            smart.initialize(super.getServletConfig(), request, response);
+            smart.upload();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String oldpic = smart.getRequest().getParameter("oldpic");
+        String bid = smart.getRequest().getParameter("bid");
+        String iid = smart.getRequest().getParameter("iid");
+        String title = smart.getRequest().getParameter("title");
+        String price = smart.getRequest().getParameter("price");
+        String writer = smart.getRequest().getParameter("writer");
+        String publisher = smart.getRequest().getParameter("publisher");
+        String isbn = smart.getRequest().getParameter("isbn");
+        String amount = smart.getRequest().getParameter("amount");
+        String note = smart.getRequest().getParameter("note");
+        String status = smart.getRequest().getParameter("status");
+        if (ValidateUtil.validateEmpty(title) &&
+                ValidateUtil.validateRegex(price, "\\d+(\\.\\d{1,2})?") &&
+                ValidateUtil.validateRegex(amount, "\\d+") &&
+                ValidateUtil.validateEmpty(note) &&
+                ValidateUtil.validateRegex(status, "\\d") &&
+                ValidateUtil.validateRegex(iid, "\\d+") &&
+                ValidateUtil.validateEmpty(writer) &&
+                ValidateUtil.validateEmpty(publisher) &&
+                ValidateUtil.validateEmpty(isbn)) {
+            Books books = new Books();
+            books.setBid(Integer.parseInt(bid));
+            books.setTitle(title);
+            books.setPrice(Double.parseDouble(price));
+            books.setWriter(writer);
+            books.setPublisher(publisher);
+            books.setIsbn(isbn);
+            books.setAmount(Integer.parseInt(amount));
+            books.setNote(note);
+            books.setStatus(Integer.parseInt(status));
+            Item item = new Item();
+            item.setIid(Integer.parseInt(iid));
+            books.setItem(item);
+            try {
+                if (smart.getFiles().getSize() > 0) {
+                    if (smart.getFiles().getFile(0).getContentType().contains("image")) {
+                        if ("nophoto.jpg".equals(oldpic)) {    //之前没有上传图片，需要重新生成名称
+                            books.setPhoto(UUID.randomUUID() + "." + smart.getFiles().getFile(0).getFileExt());
+                        } else {
+                            books.setPhoto(oldpic);
+                        }
+                    } else {
+                        books.setPhoto(oldpic);
+                    }
+                } else {
+                    books.setPhoto(oldpic);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (ServiceBackFactory.getIBookServiceBackInstance().update(books)) {
+                    String filePath = super.getServletContext().getRealPath("/upload/books/") + books.getPhoto();
+                    if (smart.getFiles().getSize() > 0) {
+                        if (smart.getFiles().getFile(0).getContentType().contains("image")) {
+                            smart.getFiles().getFile(0).saveAs(filePath);
+                        }
+                    }
+                    msg = "商品信息修改成功！";
+                } else {
+                    msg = "商品信息修改失败！";
+                }
+                //列表页面→更新表单→提交至更新完成的Servlet→forward.jsp页面
+                //因此无法取得列表页面的头信息，需要在updatePre()方法中提前传入back url
+                url = smart.getRequest().getParameter("back");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            msg = "图书修改数据出错，无法进行商品的信息修改！";
+            url = request.getParameter("back");
+        }
+        request.setAttribute("msg", msg);
+        request.setAttribute("url", url);
+        return "/pages/forward.jsp";
     }
 
     @Override

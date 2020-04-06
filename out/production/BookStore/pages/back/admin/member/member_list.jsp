@@ -56,8 +56,8 @@
                 </tr>
             </c:forEach>
         </table>
-        <input type="button" value="批量激活" onclick="updateAll('<%=updateActiveUrl%>','ids','mid')">
-        <input type="button" value="批量锁定" onclick="updateAll('<%=updateLockUrl%>','ids','mid')">
+        <input type="button" value="激活" onclick="deleteAll('<%=updateActiveUrl%>','ids','mid')">
+        <input type="button" value="锁定" onclick="deleteAll('<%=updateLockUrl%>','ids','mid')">
         <div id="splitBarDiv" style="float:right">
             <jsp:include page="/pages/split_page_plugin_bars.jsp"/>
         </div>

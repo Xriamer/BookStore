@@ -41,8 +41,21 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
     }
 
     @Override
-    public boolean doUpdate(Books vo) throws Exception {
-        return false;
+    public boolean doUpdate(Books books) throws Exception {
+        String sql = "UPDATE books SET iid=?,title=?,writer=?,publisher=?,isbn=?,price=?,amount=?,note=?,photo=?,status=? WHERE bid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1, books.getItem().getIid());
+        super.pstmt.setString(2, books.getTitle());
+        super.pstmt.setString(3, books.getWriter());
+        super.pstmt.setString(4, books.getPublisher());
+        super.pstmt.setString(5, books.getIsbn());
+        super.pstmt.setDouble(6, books.getPrice());
+        super.pstmt.setInt(7, books.getAmount());
+        super.pstmt.setString(8, books.getNote());
+        super.pstmt.setString(9, books.getPhoto());
+        super.pstmt.setInt(10, books.getStatus());
+        super.pstmt.setInt(11, books.getBid());
+        return super.pstmt.executeUpdate() > 0;
     }
 
     @Override
@@ -52,7 +65,33 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
 
     @Override
     public Books findById(Integer id) throws Exception {
-        return null;
+        Books books = null;
+        String sql = "SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE bid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1, id);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            books = new Books();
+            books.setBid(rs.getInt(1));
+            Item item = new Item();
+            item.setIid(rs.getInt(2));
+            books.setItem(item);
+            Admin admin = new Admin();
+            admin.setAid(rs.getString(3));
+            books.setAdmin(admin);
+            books.setTitle(rs.getString(4));
+            books.setWriter(rs.getString(5));
+            books.setPublisher(rs.getString(6));
+            books.setIsbn(rs.getString(7));
+            books.setPubdate(rs.getTimestamp(8));
+            books.setPrice(rs.getDouble(9));
+            books.setAmount(rs.getInt(10));
+            books.setBow(rs.getInt(11));
+            books.setNote(rs.getString(12));
+            books.setPhoto(rs.getString(13));
+            books.setStatus(rs.getInt(14));
+        }
+        return books;
     }
 
     @Override
@@ -165,7 +204,7 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
             super.pstmt.addBatch();
         }
         boolean flag = true;
-        int result [] = super.pstmt.executeBatch();
+        int result[] = super.pstmt.executeBatch();
         for (int x = 0; x < result.length; x++) {
             if (result[x] == 0) {
                 flag = false;

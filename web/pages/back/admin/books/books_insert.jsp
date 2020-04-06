@@ -8,7 +8,6 @@
             + path + "/";
     String insertUrl = basePath + "/pages/back/admin/books/BooksServletBack/insert";
 %>
-<html>
 <head>
     <base href="<%=basePath%>">
     <title>网上书城</title>
@@ -17,6 +16,7 @@
     <script type="text/javascript" src="js/books.js"></script>
 </head>
 <body>
+<div id="mainDiv">
 <form action="<%=insertUrl%>" method="post" onsubmit="return validateInsert()" enctype="multipart/form-data">
     <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" align="center" width="100%">
         <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
@@ -98,5 +98,6 @@
         </tr>
     </table>
 </form>
+</div>
 </body>
 </html>

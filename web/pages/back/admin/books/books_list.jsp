@@ -64,16 +64,16 @@
                         </c:if>
                     </td>
                     <td>
-                        修改
+                        <a href="<%=updatePreUrl%>?bid=${books.bid}">修改</a>
                     </td>
                 </tr>
             </c:forEach>
         </table>
         <c:if test="${param.status!=1}">
-            <input type="button" value="批量上架" onclick="deleteAll('<%=updateUpUrl%>','ids','bid')">
+            <input type="button" value="图书上架" onclick="deleteAll('<%=updateUpUrl%>','ids','bid')">
         </c:if>
         <c:if test="${param.status!=0}">
-            <input type="button" value="批量下架" onclick="deleteAll('<%=updateDownUrl%>','ids','bid')">
+            <input type="button" value="图书下架" onclick="deleteAll('<%=updateDownUrl%>','ids','bid')">
         </c:if>
         <c:if test="${param.status!=2}">
             <input type="button" value="移到回收站" onclick="deleteAll('<%=updateDeleteUrl%>','ids','bid')">

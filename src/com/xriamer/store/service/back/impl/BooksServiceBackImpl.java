@@ -100,5 +100,30 @@ public class BooksServiceBackImpl implements IBooksServiceBack {
         }
     }
 
+    @Override
+    public Map<String, Object> updatePre(int bid) throws Exception {
+        try {
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("allItems", DAOFactory.getIItemDAOInstance(this.dbc.getConnection()).findAll());
+            map.put("books", DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).findById(bid));
+            return map;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public boolean update(Books books) throws Exception {
+        try {
+            return DAOFactory.getIBookDAOInstance(this.dbc.getConnection()).doUpdate(books);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
 
 }
