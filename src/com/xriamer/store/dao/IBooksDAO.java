@@ -30,4 +30,12 @@ public interface IBooksDAO extends IDAO<Integer, Books> {
 
     public Integer getAllCountByItem(Integer iid, Integer status, String column, String keyWord) throws Exception;
 
+    /**
+     * 更新访问次数，每次调用访问次数加1；
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    public boolean doUpdateBow(Integer id) throws Exception;
+
 }

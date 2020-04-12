@@ -233,8 +233,8 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
         super.pstmt.setInt(5, lineSize);
         ResultSet rs = super.pstmt.executeQuery();
         while (rs.next()) {
-                Books books = new Books();
-                books.setBid(rs.getInt(1));
+            Books books = new Books();
+            books.setBid(rs.getInt(1));
             Item item = new Item();
             item.setIid(rs.getInt(2));
             books.setItem(item);
@@ -269,5 +269,13 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
             return rs.getInt(1);
         }
         return 0;
+    }
+
+    @Override
+    public boolean doUpdateBow(Integer id) throws Exception {
+        String sql = "UPDATE books SET bow=bow+1 WHERE bid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1, id);
+        return this.pstmt.executeUpdate() > 0;
     }
 }

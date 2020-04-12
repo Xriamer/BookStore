@@ -1,6 +1,7 @@
 package com.xriamer.store.servlet.front;
 
 import com.xriamer.store.factory.ServiceFrontFactory;
+import com.xriamer.utils.validate.ValidateUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,16 +22,31 @@ public class BooksServletFront extends HttpServlet {
             if ("list".equals(status)) {
                 path = this.list(request);
             }
-//            else if("show".equals(request)){
-//                path=this.show(request);
-//            }
+            else if("show".equals(status)){
+                path=this.show(request);
+            }
         }
         request.getRequestDispatcher(path).forward(request, response);
     }
 
-//    private String show(HttpServletRequest request) {
-//
-//    }
+    public String show(HttpServletRequest request) {
+        String msg=null;
+        String url=null;
+        String bid =request.getParameter("bid");
+        if(ValidateUtil.validateRegex(bid,"\\d+")){
+            try {
+                request.setAttribute("books",ServiceFrontFactory.getIBookServiceFrontInstance().show(Integer.parseInt(bid)));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "/pages/front/books/books_show.jsp";
+        }else{
+            msg="您所选择的图书有问题，请重新选择！";
+            url=request.getHeader("referer");
+            return "/pages/forward.jsp";
+        }
+    }
+
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

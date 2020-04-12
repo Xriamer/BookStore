@@ -1,5 +1,7 @@
 package com.xriamer.store.service.front;
 
+import com.xriamer.store.vo.Books;
+
 import java.util.Map;
 
 public interface IBooksServiceFront {
@@ -42,4 +44,15 @@ public interface IBooksServiceFront {
      * @throws Exception
      */
     public Map<String, Object> listByItem(int iid, int currentPage, int lineSize, String column, String keyWord) throws Exception;
+
+    /**
+     * 本操作要显示图书的完整信息，包含的操作如下:<br>
+     *     <li>调用IBooksDAO.findById()方法可以根据图书编号完整查询信息</li>
+     *     <li>调用IBooksDAO.doUpdateBow()方法，更新访问次数</li>
+     *     <li>调用IItemDAO.findById()方法，查询出商品所属分类的名称</li>
+     * @param bid  图书编号
+     * @return  商品分类设置在商品对象中返回，如果有数据返回实例化对象，否则返回null值
+     * @throws Exception
+     */
+    public Books show(int bid) throws Exception;
 }
