@@ -361,7 +361,7 @@ public class BooksServletBack extends HttpServlet {
         try {
             Map<String, Object> map = ServiceBackFactory.getIBookServiceBackInstance().listStatus(status, currentPage, lineSize, column, keyWord);
             request.setAttribute("allBooks", map.get("allBooks"));
-            request.setAttribute("allRecorders", map.get("BooksCount"));
+            request.setAttribute("allRecorders", map.get("booksCount"));
         } catch (Exception e) {
             e.printStackTrace();
         }
