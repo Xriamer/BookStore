@@ -106,3 +106,7 @@ function preview(file) {
         prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
     }
 }
+
+function goList(url,iid) {
+    window.location=url+"?iid="+iid;
+}

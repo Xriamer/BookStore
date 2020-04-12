@@ -3,6 +3,7 @@
 <div id="headerDiv">
     <img src="images/logo.jpg" style="width: 75%">
     <a href="">书店首页</a>
+    <a href="pages/front/books/BooksServletFront/list">图书列表</a>
     <a href="">购物车</a>
     <c:if test="${mid==null}">
         <a href="pages/member_login.jsp">登录</a>
