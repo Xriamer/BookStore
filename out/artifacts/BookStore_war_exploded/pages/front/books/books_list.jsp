@@ -8,6 +8,8 @@
             + path + "/";
     String showUrl = basePath + "pages/front/books/BooksServletFront/show";
     String listUrl = basePath + "pages/front/books/BooksServletFront/list";
+    String addCarUrl = basePath + "pages/front/cart/ShopcarServletFront/insert";
+
 %>
 <html>
 <head>
@@ -60,7 +62,7 @@
                 </tr>
                 <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                     <td colspan="3">${books.note}</td>
-                    <td>加入购物车</td>
+                    <td><a href="<%=addCarUrl%>?bid=${books.bid}">加入购物车</a></td>
                 </tr>
             </table>
         </c:forEach>

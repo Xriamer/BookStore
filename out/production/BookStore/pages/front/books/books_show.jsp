@@ -6,6 +6,7 @@
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
+    String addCarUrl=basePath+"pages/front/shopcar/ShopcarServletFront/insert";
 %>
 <html>
 <head>
@@ -65,7 +66,7 @@
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                 <td colspan="3" align="center">
-                    加入购物车
+                    <a href="<%=addCarUrl%>?bid=${books.bid}">加入购物车</a>
                 </td>
             </tr>
         </table>

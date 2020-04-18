@@ -278,4 +278,41 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
         super.pstmt.setInt(1, id);
         return this.pstmt.executeUpdate() > 0;
     }
+
+    @Override
+    public List<Books> findAllByBid(Set<Integer> ids) throws Exception {
+        List<Books> all = new ArrayList<Books>();
+        StringBuffer sql=new StringBuffer();
+        sql.append("SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE  status=1 AND bid IN(");
+        Iterator<Integer> iter=ids.iterator();
+        while(iter.hasNext()){
+            sql.append(iter.next()).append(",");
+        }
+        sql.delete(sql.length()-1,sql.length()).append(")");
+        super.pstmt = super.conn.prepareStatement(sql.toString());
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Books books = new Books();
+            books.setBid(rs.getInt(1));
+            Item item = new Item();
+            item.setIid(rs.getInt(2));
+            books.setItem(item);
+            Admin admin = new Admin();
+            admin.setAid(rs.getString(3));
+            books.setAdmin(admin);
+            books.setTitle(rs.getString(4));
+            books.setWriter(rs.getString(5));
+            books.setPublisher(rs.getString(6));
+            books.setIsbn(rs.getString(7));
+            books.setPubdate(rs.getTimestamp(8));
+            books.setPrice(rs.getDouble(9));
+            books.setAmount(rs.getInt(10));
+            books.setBow(rs.getInt(11));
+            books.setNote(rs.getString(12));
+            books.setPhoto(rs.getString(13));
+            books.setStatus(rs.getInt(14));
+            all.add(books);
+        }
+        return all;
+    }
 }

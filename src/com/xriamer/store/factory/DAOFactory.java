@@ -24,7 +24,5 @@ public class DAOFactory {
         return new ItemDAOImpl(conn);
     }
 
-    public static IBooksDAO getIBookDAOInstance(Connection conn) {
-        return new BooksDAOImpl(conn);
-    }
+    public static IBooksDAO getIBookDAOInstance(Connection conn) { return new BooksDAOImpl(conn); }
 }

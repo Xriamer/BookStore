@@ -101,7 +101,7 @@
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                 <td colspan="4">
-                    <textarea id="note" name="note" cols="80" rows="5">${goods.note}</textarea>
+                    <textarea id="note" name="note" cols="80" rows="5">${books.note}</textarea>
                 </td>
             </tr>
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">

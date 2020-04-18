@@ -38,4 +38,11 @@ public interface IBooksDAO extends IDAO<Integer, Books> {
      */
     public boolean doUpdateBow(Integer id) throws Exception;
 
+    /**
+     * 查询指定编号的所有商品信息
+     * @param ids
+     * @return
+     * @throws Exception
+     */
+    public List<Books> findAllByBid(Set<Integer> ids)throws Exception;
 }
