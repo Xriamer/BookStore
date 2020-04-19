@@ -40,7 +40,7 @@
                         <td><span id="price-${books.bid}">${books.price}</span></td>
                         <td>
                             <input type="button" value="-" onclick="subBut(${books.bid})">
-                            <input type="text" value="${allCars[books.bid]}" size="5" name="${books.bid}"
+                            <input type="number" value="${allCars[books.bid]}" size="5" name="${books.bid}"
                                    id="${books.bid}">
                             <input type="button" value="+" onclick="addBut(${books.bid})">
                         </td>

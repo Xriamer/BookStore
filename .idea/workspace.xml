@@ -32,6 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/util/ShopcarCookieUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/servlet/front/ShopcarServletFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/servlet/front/ShopcarServletFront.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/pages/front/cart/cart_list.jsp" afterDir="false" />
@@ -39,7 +40,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/servlet/front/ShopcarServletFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/servlet/front/ShopcarServletFront.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BookStore/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/pages/front/cart/cart_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/ShopcarServletFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/ShopcarServletFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/shopcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/shopcart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/CookieUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/front/cart/cart_list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -391,7 +392,7 @@
       <workItem from="1587015002208" duration="1800000" />
       <workItem from="1587190250609" duration="24268000" />
       <workItem from="1587260844439" duration="4377000" />
-      <workItem from="1587270982447" duration="8070000" />
+      <workItem from="1587270982447" duration="13610000" />
     </task>
     <task id="LOCAL-00001" summary="add MD5 Util Class">
       <created>1584287149974</created>
@@ -729,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587229988084</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Finish shopping cart function use by session .&#10;This feature make for visitor user.">
+      <created>1587287593074</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1587287593074</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,7 +769,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="create template file and import jar file" />
     <MESSAGE value="confirm register function &amp; add status field of table member" />
     <MESSAGE value="complete user regist servlet logic code." />
     <MESSAGE value="endless bugs" />
@@ -786,7 +793,8 @@
     <MESSAGE value="Finish books category display." />
     <MESSAGE value="Finish books detail information." />
     <MESSAGE value="add Shopcart part functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="add Shopcart part functions." />
+    <MESSAGE value="Finish shopping cart function use by session .&#10;This feature make for visitor user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish shopping cart function use by session .&#10;This feature make for visitor user." />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="75" key="#Chrome_Settings" timestamp="1584446791465">
@@ -847,11 +855,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="474" y="30" key="CommitChangelistDialog2" timestamp="1587229986146">
+    <state x="474" y="30" key="CommitChangelistDialog2" timestamp="1587287590792">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1586171036676" />
-    <state x="474" y="30" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1587229986146" />
+    <state x="474" y="30" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1587287590792" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -861,66 +869,66 @@
     </state>
     <state x="685" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1584876026870" />
     <state x="685" y="152" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1586879361055" />
-    <state width="1445" height="242" key="GridCell.Tab.0.bottom" timestamp="1587287199719">
+    <state width="1445" height="61" key="GridCell.Tab.0.bottom" timestamp="1587294651527">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1586191358619" />
-    <state width="1445" height="242" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1587287199719" />
-    <state width="1445" height="242" key="GridCell.Tab.0.center" timestamp="1587287199719">
+    <state width="1445" height="61" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1587294651527" />
+    <state width="1445" height="61" key="GridCell.Tab.0.center" timestamp="1587294651527">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1586191358618" />
-    <state width="1445" height="242" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1587287199719" />
-    <state width="1445" height="242" key="GridCell.Tab.0.left" timestamp="1587287199719">
+    <state width="1445" height="61" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1587294651527" />
+    <state width="1445" height="61" key="GridCell.Tab.0.left" timestamp="1587294651527">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1586191358618" />
-    <state width="1445" height="242" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1587287199719" />
-    <state width="1445" height="242" key="GridCell.Tab.0.right" timestamp="1587287199719">
+    <state width="1445" height="61" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1587294651527" />
+    <state width="1445" height="61" key="GridCell.Tab.0.right" timestamp="1587294651527">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1586191358619" />
-    <state width="1445" height="242" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1587287199719" />
-    <state width="1445" height="242" key="GridCell.Tab.1.bottom" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1587294651527" />
+    <state width="1445" height="61" key="GridCell.Tab.1.bottom" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1586191358619" />
-    <state width="1445" height="242" key="GridCell.Tab.1.bottom/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.1.center" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.1.bottom/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.1.center" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1586191358619" />
-    <state width="1445" height="242" key="GridCell.Tab.1.center/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.1.left" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.1.center/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.1.left" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1586191358619" />
-    <state width="1445" height="242" key="GridCell.Tab.1.left/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.1.right" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.1.left/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.1.right" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1586191358619" />
-    <state width="1445" height="242" key="GridCell.Tab.1.right/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.2.bottom" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.1.right/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.2.bottom" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1586191358620" />
-    <state width="1445" height="242" key="GridCell.Tab.2.bottom/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.2.center" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.2.bottom/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.2.center" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1586191358620" />
-    <state width="1445" height="242" key="GridCell.Tab.2.center/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.2.left" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.2.center/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.2.left" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1586191358620" />
-    <state width="1445" height="242" key="GridCell.Tab.2.left/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
-    <state width="1445" height="242" key="GridCell.Tab.2.right" timestamp="1587287199484">
+    <state width="1445" height="61" key="GridCell.Tab.2.left/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
+    <state width="1445" height="61" key="GridCell.Tab.2.right" timestamp="1587294651355">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1181" height="143" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1586191358620" />
-    <state width="1445" height="242" key="GridCell.Tab.2.right/0.30.1536.834@0.30.1536.834" timestamp="1587287199484" />
+    <state width="1445" height="61" key="GridCell.Tab.2.right/0.30.1536.834@0.30.1536.834" timestamp="1587294651355" />
     <state width="1181" height="479" key="GridCell.Tab.3.bottom" timestamp="1586669238420">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -962,11 +970,11 @@
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1585759588082" />
     <state x="214" y="30" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1587278528938" />
-    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1587229995097">
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1587287597128">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1586171048479" />
-    <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1587229995097" />
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1587287597128" />
     <state x="465" y="271" key="com.intellij.ide.util.TipDialog" timestamp="1586660925357">
       <screen x="0" y="30" width="1536" height="834" />
     </state>

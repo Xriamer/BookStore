@@ -37,7 +37,9 @@ public class CookieUtil {
         Cookie c[] = request.getCookies();
         if (c != null) {
             for (int x = 0; x < c.length; x++) {
-                map.put(c[x].getName(), c[x].getValue());
+                if(!"JSESSIONID".equals(c[x].getName())){
+                    map.put(c[x].getName(), c[x].getValue());
+                }
             }
         }
         return map;
