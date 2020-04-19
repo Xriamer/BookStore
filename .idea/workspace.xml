@@ -32,16 +32,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fa89e8-a519-4557-be20-3f3e69ac6ecc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/util/ShopcarCookieUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/IShopcarDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/dao/impl/ShopcarDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xriamer/store/vo/Shopcar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/servlet/front/ShopcarServletFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/store/servlet/front/ShopcarServletFront.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/pages/front/cart/cart_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/pages/front/cart/cart_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/servlet/front/ShopcarServletFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/store/servlet/front/ShopcarServletFront.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BookStore/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/pages/front/cart/cart_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/ShopcarServletFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/store/servlet/front/ShopcarServletFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xriamer/utils/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xriamer/utils/CookieUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/front/cart/cart_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/front/cart/cart_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/CookieUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/BookStore_war_exploded/WEB-INF/classes/com/xriamer/utils/CookieUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/CookieUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BookStore/com/xriamer/utils/CookieUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SQLScript.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQLScript.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,14 +389,7 @@
       <workItem from="1587015002208" duration="1800000" />
       <workItem from="1587190250609" duration="24268000" />
       <workItem from="1587260844439" duration="4377000" />
-      <workItem from="1587270982447" duration="13610000" />
-    </task>
-    <task id="LOCAL-00001" summary="add MD5 Util Class">
-      <created>1584287149974</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1584287149974</updated>
+      <workItem from="1587270982447" duration="22045000" />
     </task>
     <task id="LOCAL-00002" summary="update">
       <created>1584287653024</created>
@@ -737,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587287593074</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Finish shopping cart function use by Cookie.&#10;This feature make for visitor user.">
+      <created>1587294750948</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1587294750964</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -769,7 +766,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="confirm register function &amp; add status field of table member" />
     <MESSAGE value="complete user regist servlet logic code." />
     <MESSAGE value="endless bugs" />
     <MESSAGE value="delete taglib statement" />
@@ -794,7 +790,8 @@
     <MESSAGE value="Finish books detail information." />
     <MESSAGE value="add Shopcart part functions." />
     <MESSAGE value="Finish shopping cart function use by session .&#10;This feature make for visitor user." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish shopping cart function use by session .&#10;This feature make for visitor user." />
+    <MESSAGE value="Finish shopping cart function use by Cookie.&#10;This feature make for visitor user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish shopping cart function use by Cookie.&#10;This feature make for visitor user." />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="75" key="#Chrome_Settings" timestamp="1584446791465">
@@ -830,11 +827,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="885" y="321" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.834@0.0.1536.834" timestamp="1584707860970" />
-    <state x="574" y="157" key="#com.intellij.ide.util.MemberChooser" timestamp="1587210657389">
+    <state x="574" y="157" key="#com.intellij.ide.util.MemberChooser" timestamp="1587313515934">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="574" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1586190373730" />
-    <state x="574" y="157" key="#com.intellij.ide.util.MemberChooser/0.30.1536.834@0.30.1536.834" timestamp="1587210657389" />
+    <state x="574" y="157" key="#com.intellij.ide.util.MemberChooser/0.30.1536.834@0.30.1536.834" timestamp="1587313515934" />
     <state x="360" y="75" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584456772750">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -855,11 +852,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="464" y="172" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.834@0.0.1536.834" timestamp="1584464579145" />
-    <state x="474" y="30" key="CommitChangelistDialog2" timestamp="1587287590792">
+    <state x="474" y="30" key="CommitChangelistDialog2" timestamp="1587294748855">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="474" y="10" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1586171036676" />
-    <state x="474" y="30" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1587287590792" />
+    <state x="474" y="30" key="CommitChangelistDialog2/0.30.1536.834@0.30.1536.834" timestamp="1587294748855" />
     <state x="551" y="133" key="DetectedRootsChooserDialog" timestamp="1584450498610">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -970,11 +967,11 @@
     </state>
     <state x="214" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1585759588082" />
     <state x="214" y="30" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1587278528938" />
-    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1587287597128">
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2" timestamp="1587294753245">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1586171048479" />
-    <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1587287597128" />
+    <state x="361" y="180" key="Vcs.Push.Dialog.v2/0.30.1536.834@0.30.1536.834" timestamp="1587294753245" />
     <state x="465" y="271" key="com.intellij.ide.util.TipDialog" timestamp="1586660925357">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
