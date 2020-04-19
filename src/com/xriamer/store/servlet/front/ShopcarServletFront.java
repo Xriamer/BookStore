@@ -14,6 +14,8 @@ import java.util.Map;
 
 @WebServlet(name = "ShopcarServletFront", urlPatterns = "/pages/front/cart/ShopcarServletFront/*")
 public class ShopcarServletFront extends HttpServlet {
+
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = "/pages/errors.jsp";
@@ -25,9 +27,22 @@ public class ShopcarServletFront extends HttpServlet {
                 path = this.list(request);
             } else if ("update".equals(status)) {
                 path = this.update(request);
+            } else if ("delete".equals(status)) {
+                path = this.delete(request);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
+    }
+
+    private String delete(HttpServletRequest request) {
+        Map<Integer, Integer> map = (Map<Integer, Integer>) request.getSession().getAttribute("allCars");
+        String ids = request.getParameter("ids");
+        String result[] = ids.split("\\|");
+        for (int x = 0; x < result.length; x++) {
+            map.remove(Integer.parseInt(result[x]));
+        }
+        request.getSession().setAttribute("allCars", map);
+        return "/pages/front/cart/ShopcarServletFront/list";
     }
 
     private String insert(HttpServletRequest request) {
