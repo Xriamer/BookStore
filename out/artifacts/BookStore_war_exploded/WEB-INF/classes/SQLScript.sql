@@ -11,6 +11,7 @@ DROP TABLE IF EXISTS member;
 DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS item;
 DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS shopcar;
 --创建数据表
 --1.创建图书类型表
 CREATE TABLE item(
@@ -86,8 +87,16 @@ CONSTRAINT   pk_odid      PRIMARY KEY(odid),
 CONSTRAINT   fk_oid       FOREIGN KEY(oid) REFERENCES orders(oid) ON DELETE CASCADE,
 CONSTRAINT   fk_bid       FOREIGN KEY(bid) REFERENCES books(bid) ON DELETE SET NULL
 ) engine=innodb;
+--7.购物车信息表
+CREATE TABLE shopcar(
+bid          INT        ,
+mid          VARCHAR(50),
+amount       INT        ,
+CONSTRAINT   fk_bid1      FOREIGN KEY(bid) REFERENCES books(bid) ON DELETE CASCADE,
+CONSTRAINT   fk_mid1      FOREIGN KEY(mid) REFERENCES member(mid) ON DELETE CASCADE
+) engine=innodb;
 --编写测试数据
---增加商品分类信息
+--增加图书分类信息
 INSERT INTO item(title) VALUES('文学小说');
 INSERT INTO item(title) VALUES('童书');
 INSERT INTO item(title) VALUES('教育考试');

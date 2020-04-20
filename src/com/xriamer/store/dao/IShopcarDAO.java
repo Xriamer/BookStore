@@ -52,7 +52,7 @@ public interface IShopcarDAO extends IDAO<Integer, Shopcar> {
      * @return
      * @throws Exception
      */
-    public boolean doRemoveByMemberAndGoods(String mid, Integer bid) throws Exception;
+    public boolean doRemoveByMemberAndGoods(String mid, Set<Integer> bid) throws Exception;
 
     /**
      * 一个用户购买的所有的图书信息

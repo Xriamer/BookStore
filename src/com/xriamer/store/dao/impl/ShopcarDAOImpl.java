@@ -68,18 +68,23 @@ public class ShopcarDAOImpl extends AbstractDAOImpl implements IShopcarDAO {
     }
 
     @Override
-    public boolean doRemoveByMemberAndGoods(String mid, Integer bid) throws Exception {
-        String sql = "DELETE FROM shopcar WHERE mid=? AND bid=?";
-        super.pstmt = super.conn.prepareStatement(sql);
+    public boolean doRemoveByMemberAndGoods(String mid, Set<Integer> bid) throws Exception {
+        StringBuffer sql = new StringBuffer();
+        sql.append("DELETE FROM shopcar WHERE mid=? AND bid IN (");
+        Iterator<Integer> iter=bid.iterator();
+        while (iter.hasNext()){
+            sql.append(iter.next()).append(",");
+        }
+        sql.delete(sql.length()-1,sql.length()).append(")");
+        super.pstmt = super.conn.prepareStatement(sql.toString());
         super.pstmt.setString(1, mid);
-        super.pstmt.setInt(2, bid);
         return super.pstmt.executeUpdate() > 0;
     }
 
     @Override
     public Map<Integer, Integer> findAllByMember(String mid) throws Exception {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        String sql = "SELECT bid,amout FROM shopcar WHERE mid=?";
+        String sql = "SELECT bid,amount FROM shopcar WHERE mid=?";
         super.pstmt = super.conn.prepareStatement(sql);
         super.pstmt.setString(1, mid);
         ResultSet rs = super.pstmt.executeQuery();
