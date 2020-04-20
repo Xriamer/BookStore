@@ -47,6 +47,7 @@ public interface IMemberDAO extends IDAO<String, Member> {
 
     /**
      * 根据用户的的状态来进行数据的列表操作
+     *
      * @param status
      * @param currentPage
      * @param lineSize
@@ -55,24 +56,34 @@ public interface IMemberDAO extends IDAO<String, Member> {
      * @return
      * @throws Exception
      */
-    public List<Member> findAllByStatus(Integer status,Integer currentPage,Integer lineSize,String column,String keyWord) throws Exception;
+    public List<Member> findAllByStatus(Integer status, Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception;
 
     /**
      * 根据用户的状态统计所有的数据量
+     *
      * @param status
      * @param column
      * @param keyWord
      * @return
      * @throws Exception
      */
-    public Integer getAllCountByStatus(Integer status,String column,String keyWord) throws Exception;
+    public Integer getAllCountByStatus(Integer status, String column, String keyWord) throws Exception;
 
     /**
      * 是进行数据的批量更新，状态由外部设置
+     *
      * @param ids
      * @param status
      * @return
      * @throws Exception
      */
-    public boolean doUpdateStatus(Set<String> ids,Integer status) throws Exception;
+    public boolean doUpdateStatus(Set<String> ids, Integer status) throws Exception;
+
+    /**
+     * 完善用户基本信息
+     * @param vo
+     * @return
+     * @throws Exception
+     */
+    public boolean doUpdateMember(Member vo) throws Exception;
 }

@@ -36,4 +36,18 @@ public interface IMemberServiceFront {
      * @throws Exception
      */
     public boolean login(Member mb) throws Exception;
+
+    /**
+     * @param mid
+     * @return
+     * @throws Exception
+     */
+    public Member updatePre(String mid) throws Exception;
+
+    /**
+     * @param vo
+     * @return
+     * @throws Exception
+     */
+    public boolean update(Member vo) throws Exception;
 }

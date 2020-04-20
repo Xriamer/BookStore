@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName = "MemberLoginFilter", urlPatterns = "/pages/front/cart/*")
+@WebFilter(filterName = "MemberLoginFilter", urlPatterns = {"/pages/front/cart/*","/pages/front/member/*"})
 public class MemberLoginFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

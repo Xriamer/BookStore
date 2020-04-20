@@ -74,15 +74,15 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public List<Member> findAllSplit(Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception {
-        List<Member> all=new ArrayList<Member>();
-        String sql="SELECT mid,password,name,phone,address,code,regdate,photo,status FROM member WHERE "+ column +" LIKE ? LIMIT ? , ? ";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%" + keyWord + "%");
-        super.pstmt.setInt(2,(currentPage-1)*lineSize);
-        super.pstmt.setInt(3,lineSize);
-        ResultSet rs=super.pstmt.executeQuery();
-        while(rs.next()){
-            Member mb=new Member();
+        List<Member> all = new ArrayList<Member>();
+        String sql = "SELECT mid,password,name,phone,address,code,regdate,photo,status FROM member WHERE " + column + " LIKE ? LIMIT ? , ? ";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, (currentPage - 1) * lineSize);
+        super.pstmt.setInt(3, lineSize);
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Member mb = new Member();
             mb.setMid(rs.getString(1));
             mb.setPassword(rs.getString(2));
             mb.setName(rs.getString(3));
@@ -102,7 +102,7 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
      * 数据个数统计
      */
     public Integer getAllCount(String column, String keyWord) throws Exception {
-        return super.countHandle("member",column,keyWord);
+        return super.countHandle("member", column, keyWord);
     }
 
     @Override
@@ -147,16 +147,16 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public List<Member> findAllByStatus(Integer status, Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception {
-        List<Member> all=new ArrayList<Member>();
-        String sql="SELECT mid,password,name,phone,address,code,regdate,photo,status FROM member WHERE "+ column +" LIKE ? AND status=? LIMIT ? , ? ";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%" + keyWord + "%");
-        super.pstmt.setInt(2,status);
-        super.pstmt.setInt(3,(currentPage-1)*lineSize);
-        super.pstmt.setInt(4,lineSize);
-        ResultSet rs=super.pstmt.executeQuery();
-        while(rs.next()){
-            Member mb=new Member();
+        List<Member> all = new ArrayList<Member>();
+        String sql = "SELECT mid,password,name,phone,address,code,regdate,photo,status FROM member WHERE " + column + " LIKE ? AND status=? LIMIT ? , ? ";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, status);
+        super.pstmt.setInt(3, (currentPage - 1) * lineSize);
+        super.pstmt.setInt(4, lineSize);
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Member mb = new Member();
             mb.setMid(rs.getString(1));
             mb.setPassword(rs.getString(2));
             mb.setName(rs.getString(3));
@@ -173,12 +173,12 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public Integer getAllCountByStatus(Integer status, String column, String keyWord) throws Exception {
-        String sql="SELECT COUNT(*) FROM member WHERE "+column+" LIKE ? AND status=?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        super.pstmt.setString(1,"%"+keyWord+"%");
-        super.pstmt.setInt(2,status);
-        ResultSet rs=super.pstmt.executeQuery();
-        if(rs.next()){
+        String sql = "SELECT COUNT(*) FROM member WHERE " + column + " LIKE ? AND status=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, status);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
             return rs.getInt(1);
         }
         return 0;
@@ -186,24 +186,36 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
 
     @Override
     public boolean doUpdateStatus(Set<String> ids, Integer status) throws Exception {
-        if(ids.size()==0){
+        if (ids.size() == 0) {
             return false;
         }
-        boolean flag=true;
-        String sql="UPDATE member SET status=? WHERE mid=?";
-        super.pstmt=super.conn.prepareStatement(sql);
-        Iterator<String> iter=ids.iterator();
-        while(iter.hasNext()){
-            super.pstmt.setInt(1,status);
-            super.pstmt.setString(2,iter.next());
+        boolean flag = true;
+        String sql = "UPDATE member SET status=? WHERE mid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        Iterator<String> iter = ids.iterator();
+        while (iter.hasNext()) {
+            super.pstmt.setInt(1, status);
+            super.pstmt.setString(2, iter.next());
             super.pstmt.addBatch();//增加到批处理操作
         }
-        int result []=super.pstmt.executeBatch();//执行批处理
-        for(int x=0;x<result.length;x++){
-            if(result[x]==0){
-                flag=false;
+        int result[] = super.pstmt.executeBatch();//执行批处理
+        for (int x = 0; x < result.length; x++) {
+            if (result[x] == 0) {
+                flag = false;
             }
         }
         return true;
+    }
+
+    @Override
+    public boolean doUpdateMember(Member vo) throws Exception {
+        String sql = "UPDATE member SET name=?,phone=?,address=?,photo=? WHERE mid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, vo.getName());
+        super.pstmt.setString(2, vo.getPhone());
+        super.pstmt.setString(3, vo.getAddress());
+        super.pstmt.setString(4, vo.getPhoto());
+        super.pstmt.setString(5, vo.getMid());
+        return super.pstmt.executeUpdate() > 0;
     }
 }

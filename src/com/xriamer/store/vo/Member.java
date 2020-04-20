@@ -14,6 +14,21 @@ public class Member implements Serializable {
     private String photo;
     private Integer status;
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "mid='" + mid + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", code='" + code + '\'' +
+                ", regdate=" + regdate +
+                ", photo='" + photo + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
     public Integer getStatus() {
         return status;
     }
@@ -84,5 +99,20 @@ public class Member implements Serializable {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public Member(String mid, String password, String name, String phone, String address, String code, Date regdate, String photo, Integer status) {
+        this.mid = mid;
+        this.password = password;
+        this.name = name;
+        this.phone = phone;
+        this.address = address;
+        this.code = code;
+        this.regdate = regdate;
+        this.photo = photo;
+        this.status = status;
+    }
+    public Member(){
+
     }
 }
