@@ -60,9 +60,9 @@ public class MemberServiceFrontImpl implements IMemberServiceFront {
     }
 
     @Override
-    public boolean update(Member vo) throws Exception {
+    public boolean update(Member books) throws Exception {
         try {
-            return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateMember(vo);
+            return DAOFactory.getIMemberDAOInstance(this.dbc.getConnection()).doUpdateMember(books);
         } catch (Exception e) {
             throw e;
         } finally {

@@ -268,14 +268,15 @@ public class BooksServletBack extends HttpServlet {
             try {
                 if (ServiceBackFactory.getIBookServiceBackInstance().update(books)) {
                     String filePath = super.getServletContext().getRealPath("/upload/books/") + books.getPhoto();
+                    System.out.println(filePath);
                     if (smart.getFiles().getSize() > 0) {
                         if (smart.getFiles().getFile(0).getContentType().contains("image")) {
                             smart.getFiles().getFile(0).saveAs(filePath);
                         }
                     }
-                    msg = "商品信息修改成功！";
+                    msg = "图书信息修改成功！";
                 } else {
-                    msg = "商品信息修改失败！";
+                    msg = "图书信息修改失败！";
                 }
                 //列表页面→更新表单→提交至更新完成的Servlet→forward.jsp页面
                 //因此无法取得列表页面的头信息，需要在updatePre()方法中提前传入back url

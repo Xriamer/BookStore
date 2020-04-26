@@ -45,9 +45,9 @@ public interface IMemberServiceFront {
     public Member updatePre(String mid) throws Exception;
 
     /**
-     * @param vo
+     * @param books
      * @return
      * @throws Exception
      */
-    public boolean update(Member vo) throws Exception;
+    public boolean update(Member books) throws Exception;
 }

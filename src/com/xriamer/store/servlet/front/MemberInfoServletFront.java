@@ -23,7 +23,7 @@ public class MemberInfoServletFront extends HttpServlet {
             if ("updatePre".equals(status)) {
                 path = this.updatePre(request);
             } else if ("update".equals(status)) {
-                path = this.update(request,response);
+                path = this.update(request, response);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
@@ -34,63 +34,16 @@ public class MemberInfoServletFront extends HttpServlet {
         this.doGet(request, response);
     }
 
-    //    public String update(HttpServletRequest request, HttpServletResponse response) {
-//        String mid = (String) request.getSession().getAttribute("mid");
-//        SmartUpload smart = new SmartUpload();
-//        try {
-//            smart.initialize(super.getServletConfig(), request, response);
-//            smart.upload();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        String name = smart.getRequest().getParameter("name");
-//        String phone = smart.getRequest().getParameter("phone");
-//        String address = smart.getRequest().getParameter("address");
-//        String msg = null;
-//        String url = null;
-//        if (ValidateUtil.validateEmpty(name) && ValidateUtil.validateEmpty(phone) && ValidateUtil.validateEmpty(address)) {
-//            Member vo = new Member();
-//            vo.setMid(mid);
-//            vo.setName(name);
-//            vo.setAddress(address);
-//            vo.setPhone(phone);
-//            vo.setPhone(smart.getRequest().getParameter("oldpic"));
-//            System.out.println(vo);
-//            try {
-//                if (smart.getFiles().getSize() > 0) {  //有新的照片更新
-//                    if (smart.getFiles().getFile(0).getContentType().contains("images")) {
-//                        if ("nophoto.jpg".equals(vo.getPhoto())) {
-//                            vo.setPhoto(UUID.randomUUID() + "." + smart.getFiles().getFile(0).getFileExt());
-//                        }
-//                    }
-//                }
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                if (ServiceFrontFactory.getIMemberServiceFrontInstance().update(vo)) {
-//                    if (smart.getFiles().getSize() > 0) {
-//                        if (smart.getFiles().getFile(0).getContentType().contains("images")) {
-//                            String filePath = super.getServletContext().getRealPath("/upload/members/") + vo.getPhoto();
-//                            smart.getFiles().getFile(0).saveAs(filePath);
-//                        }
-//                    }
-//                    msg = "用户信息更新成功!";
-//                    request.getSession().setAttribute("photo", vo.getPhoto());
-//                } else {
-//                    msg = "用户信息更新失败!";
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        } else {
-//            msg = "更新数据不完整,请重新输入!";
-//        }
-//        url = "/pages/front/member/MemberInfoServletFront/updatePre";
-//        request.setAttribute("msg", msg);
-//        request.setAttribute("url", url);
-//        return "/pages/forward.jsp";
-//    }
+    public String updatePre(HttpServletRequest request) {
+        String mid = (String) request.getSession().getAttribute("mid");
+        try {
+            request.setAttribute("member", ServiceFrontFactory.getIMemberServiceFrontInstance().updatePre(mid));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "/pages/front/member/member_update.jsp";
+    }
+
     public String update(HttpServletRequest request, HttpServletResponse response) {
         String mid = (String) request.getSession().getAttribute("mid");
         SmartUpload smart = new SmartUpload();
@@ -98,43 +51,44 @@ public class MemberInfoServletFront extends HttpServlet {
             smart.initialize(super.getServletConfig(), request, response);
             smart.upload();
         } catch (Exception e) {
+            e.printStackTrace();
         }
         String name = smart.getRequest().getParameter("name");
         String phone = smart.getRequest().getParameter("phone");
         String address = smart.getRequest().getParameter("address");
+        String oldpic = smart.getRequest().getParameter("oldpic");
         String msg = null;
-        String url = null;
         if (ValidateUtil.validateEmpty(name) &&
                 ValidateUtil.validateEmpty(phone) &&
                 ValidateUtil.validateEmpty(address)) {
-            Member member = new Member();
-            member.setMid(mid);
-            member.setName(name);
-            member.setPhone(phone);
-            member.setAddress(address);
-            member.setPhoto(smart.getRequest().getParameter("oldpic"));
+            Member books = new Member();
+            books.setMid(mid);
+            books.setName(name);
+            books.setPhone(phone);
+            books.setAddress(address);
+            books.setPhoto(oldpic);
             try {
                 if (smart.getFiles().getSize() > 0) {    // 有新的照片要更新
                     if (smart.getFiles().getFile(0).getContentType().contains("image")) {
-                        if ("nophoto.jpg".equals(member.getPhoto())) {
-                            member.setPhoto(UUID.randomUUID() + "." + smart.getFiles().getFile(0).getFileExt());
-                        }
+                        //if ("nophoto.jpg".equals(oldpic)) {
+                        books.setPhoto(UUID.randomUUID() + "." + smart.getFiles().getFile(0).getFileExt());
+                        //}
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                if (ServiceFrontFactory.getIMemberServiceFrontInstance().update(member)) {
-                    if (smart.getFiles().getSize() > 0) {    // 有新的照片要更新
+                if (ServiceFrontFactory.getIMemberServiceFrontInstance().update(books)) {
+                    String filePath = super.getServletContext().getRealPath("/upload/member/") + books.getPhoto();
+                    System.out.println(filePath);
+                    if (smart.getFiles().getSize() > 0) {
                         if (smart.getFiles().getFile(0).getContentType().contains("image")) {
-                            //String filePath = super.getServletContext().getRealPath("/upload/members/") + member.getPhoto();
-                            String filePath = super.getServletContext().getRealPath("/upload/books/") + member.getPhoto();
                             smart.getFiles().getFile(0).saveAs(filePath);
                         }
                     }
                     msg = "用户信息更新成功！";
-                    request.getSession().setAttribute("photo", member.getPhoto());
+                    request.getSession().setAttribute("photo", books.getPhoto());
                 } else {
                     msg = "用户信息更新失败！";
                 }
@@ -144,20 +98,9 @@ public class MemberInfoServletFront extends HttpServlet {
         } else {
             msg = "更新数据不完整，请重新输入！";
         }
-        url = "/pages/front/member/MemberInfoServletFront/updatePre";
+        String url = "/pages/front/member/MemberInfoServletFront/updatePre";
         request.setAttribute("msg", msg);
         request.setAttribute("url", url);
         return "/pages/forward.jsp";
-    }
-
-
-    public String updatePre(HttpServletRequest request) {
-        String mid = (String) request.getSession().getAttribute("mid");
-        try {
-            request.setAttribute("member", ServiceFrontFactory.getIMemberServiceFrontInstance().updatePre(mid));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "/pages/front/member/member_update.jsp";
     }
 }
