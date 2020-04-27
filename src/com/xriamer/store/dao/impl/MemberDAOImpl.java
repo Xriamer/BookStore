@@ -6,6 +6,7 @@ import com.xriamer.utils.dao.AbstractDAOImpl;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -103,6 +104,28 @@ public class MemberDAOImpl extends AbstractDAOImpl implements IMemberDAO {
      */
     public Integer getAllCount(String column, String keyWord) throws Exception {
         return super.countHandle("member", column, keyWord);
+    }
+
+    @Override
+    public Member findById2(String mid) throws SQLException {
+        Member mb = null;
+        String sql = "SELECT mid,password,name,phone,address,code,status,regdate,photo FROM member WHERE mid =?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, mid);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            mb = new Member();
+            mb.setMid(rs.getString(1));
+            mb.setPassword(rs.getString(2));
+            mb.setName(rs.getString(3));
+            mb.setPhone(rs.getString(4));
+            mb.setAddress(rs.getString(5));
+            mb.setCode(rs.getString(6));
+            mb.setStatus(rs.getInt(7));
+            mb.setRegdate(rs.getTimestamp(8));
+            mb.setPhoto(rs.getString(9));
+        }
+        return mb;
     }
 
     @Override

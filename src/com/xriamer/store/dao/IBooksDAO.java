@@ -2,6 +2,7 @@ package com.xriamer.store.dao;
 
 import com.xriamer.store.vo.Books;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Set;
 
@@ -44,5 +45,14 @@ public interface IBooksDAO extends IDAO<Integer, Books> {
      * @return
      * @throws Exception
      */
-    public List<Books> findAllByBid(Set<Integer> ids)throws Exception;
+    public List<Books> findAllByBid(Set<Integer> ids)throws SQLException;
+
+    /**
+     * 进行图书库存量的变更
+     * @param bid
+     * @param num
+     * @return
+     * @throws Exception
+     */
+    public boolean doUpdateByAmount(Integer bid,Integer num) throws SQLException;
 }

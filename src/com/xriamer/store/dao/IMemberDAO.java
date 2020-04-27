@@ -2,12 +2,13 @@ package com.xriamer.store.dao;
 
 import com.xriamer.store.vo.Member;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Set;
 
 public interface IMemberDAO extends IDAO<String, Member> {
 
-
+    public Member findById2(String mid) throws SQLException;
     /**
      * 根据mid查询
      * @param mid

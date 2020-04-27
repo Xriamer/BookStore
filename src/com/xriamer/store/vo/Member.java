@@ -2,6 +2,7 @@ package com.xriamer.store.vo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Member implements Serializable {
     private String mid;
@@ -13,6 +14,8 @@ public class Member implements Serializable {
     private Date regdate;
     private String photo;
     private Integer status;
+    private List<Orders> allOrders;
+
 
     @Override
     public String toString() {
@@ -112,7 +115,15 @@ public class Member implements Serializable {
         this.photo = photo;
         this.status = status;
     }
-    public Member(){
 
+    public Member() {
+
+    }
+
+    public List<Orders> getAllOrders() {
+        return allOrders;
+    }
+    public void setAllOrders(List<Orders> allOrders){
+        this.allOrders=allOrders;
     }
 }

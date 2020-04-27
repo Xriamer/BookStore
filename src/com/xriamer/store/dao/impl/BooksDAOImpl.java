@@ -8,6 +8,7 @@ import com.xriamer.utils.dao.AbstractDAOImpl;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -280,7 +281,7 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
     }
 
     @Override
-    public List<Books> findAllByBid(Set<Integer> ids) throws Exception {
+    public List<Books> findAllByBid(Set<Integer> ids) throws SQLException {
         List<Books> all = new ArrayList<Books>();
         StringBuffer sql=new StringBuffer();
         sql.append("SELECT bid,iid,aid,title,writer,publisher,isbn,pubdate,price,amount,bow,note,photo,status From books WHERE  status=1 AND bid IN(");
@@ -314,5 +315,13 @@ public class BooksDAOImpl extends AbstractDAOImpl implements IBooksDAO {
             all.add(books);
         }
         return all;
+    }
+
+    @Override
+    public boolean doUpdateByAmount(Integer bid, Integer num) throws SQLException {
+        String sql="UPDATE books SET amount=amount+" + num + " WHERE bid=?";
+        super.pstmt=super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1,bid);
+        return super.pstmt.executeUpdate()>0;
     }
 }

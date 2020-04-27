@@ -25,4 +25,12 @@ public class DAOFactory {
     public static IShopcarDAO getIShopcarDAOInstance(Connection conn) {
         return new ShopcarDAOImpl(conn);
     }
+
+    public static IOrdersDAO getIOrdersDAOInstance(Connection conn) {
+        return new OrdersDAOImpl(conn);
+    }
+
+    public static IDetailsDAO getIDetailsDAOInstance(Connection conn) {
+        return new DetailsDAOImpl(conn);
+    }
 }
