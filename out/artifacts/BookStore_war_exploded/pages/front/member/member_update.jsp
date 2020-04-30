@@ -46,7 +46,7 @@
                     <td><span id="addressMsg"></span></td>
                 </tr>
                 <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                    <td><strong>个人靓照：</strong></td>
+                    <td><strong>用户头像：</strong></td>
                     <td><input type="file" onchange="preview(this)" name="photo" id="photo"></td>
                     <td><span id="photoMsg"></span></td>
                 </tr>

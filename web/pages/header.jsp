@@ -11,7 +11,7 @@
     </c:if>
     <c:if test="${mid!=null}">
         <a href="pages/front/member/MemberInfoServletFront/updatePre">个人信息</a>
-        <a href="">全部订单</a>
+        <a href="pages/front/orders/OrdersServletFront/list">全部订单</a>
         <a href="pages/MemberServletFront/logout">安全退出</a>
         <img src="upload/member/${photo}" style="width: 50px;height: 50px;">
     </c:if>

@@ -97,7 +97,7 @@ public class BooksServletFront extends HttpServlet {
         request.setAttribute("column", column);
         request.setAttribute("keyWord", keyWord);
         request.setAttribute("columnData", columnData);
-        request.setAttribute("url", "/pages/back/admin/books/BooksServletBack/listStatus");
+        request.setAttribute("url", "/pages/front/books/BooksServletBack/list");
         request.setAttribute("paramName", "iid");
         request.setAttribute("paramValue", iid);
         return "/pages/front/books/books_list.jsp";

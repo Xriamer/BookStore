@@ -13,4 +13,12 @@ public interface IDetailsDAO extends IDAO<Integer, Details>{
      * @throws Exception
      */
     public boolean doCreateBatch(List<Details> details) throws SQLException;
+
+    /**
+     * 根据订单编号查询出一个订单的完整详情信息
+     * @param oid
+     * @return
+     * @throws Exception
+     */
+    public List<Details> findAllByOrders(Integer oid) throws Exception;
 }

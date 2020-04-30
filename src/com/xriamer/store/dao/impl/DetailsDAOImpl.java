@@ -1,11 +1,15 @@
 package com.xriamer.store.dao.impl;
 
 import com.xriamer.store.dao.IDetailsDAO;
+import com.xriamer.store.vo.Books;
 import com.xriamer.store.vo.Details;
+import com.xriamer.store.vo.Orders;
 import com.xriamer.utils.dao.AbstractDAOImpl;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -37,6 +41,30 @@ public class DetailsDAOImpl extends AbstractDAOImpl implements IDetailsDAO {
             }
         }
         return flag;
+    }
+
+    @Override
+    public List<Details> findAllByOrders(Integer oid) throws Exception {
+        List<Details> all = new ArrayList<>();
+        String sql = "SELECT odid,oid,bid,title,price,amount FROM details WHERE oid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1, oid);
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Details details = new Details();
+            details.setOdid(rs.getInt(1));
+            Orders orders = new Orders();
+            orders.setOid(rs.getInt(2));
+            details.setOrders(orders);
+            Books books = new Books();
+            books.setBid(rs.getInt(3));
+            details.setBooks(books);
+            details.setTitle(rs.getString(4));
+            details.setPrice(rs.getDouble(5));
+            details.setAmount(rs.getInt(6));
+            all.add(details);
+        }
+        return all;
     }
 
     @Override

@@ -3,8 +3,10 @@ package com.xriamer.store.service.front;
 import com.xriamer.store.exception.EmptyShopcarException;
 import com.xriamer.store.exception.UnEnoughAmountException;
 import com.xriamer.store.exception.UncompleteMemberInformationException;
+import com.xriamer.store.vo.Orders;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 public interface IOrdersServiceFront {
     /**
@@ -18,4 +20,21 @@ public interface IOrdersServiceFront {
      * @throws SQLException                         JDBC错误所造成的异常
      */
     public boolean insert(String mid) throws UncompleteMemberInformationException, UnEnoughAmountException, EmptyShopcarException, SQLException;
+
+    /**
+     * 查看一个用户所有订单信息
+     * @param mid
+     * @return
+     * @throws Exception
+     */
+    public Map<String,Object> listByMember(String mid, int currentPage, int lineSize) throws Exception;
+
+    /**
+     * 查看一个订单信息以及订单对应的所有详情信息
+     * @param mid
+     * @param oid
+     * @return
+     * @throws Exception
+     */
+    public Orders show(String mid,int oid) throws Exception;
 }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Map;
 
 @WebServlet(name = "OrdersServletFront", urlPatterns = "/pages/front/orders/OrdersServletFront/*")
 public class OrdersServletFront extends HttpServlet {
@@ -23,9 +24,61 @@ public class OrdersServletFront extends HttpServlet {
         if (status != null) {
             if ("insert".equals(status)) {
                 path = this.insert(request);
+            } else if ("list".equals(status)) {
+                path = this.list(request);
+            } else if ("show".equals(status)) {
+                path = this.show(request);
             }
         }
         request.getRequestDispatcher(path).forward(request, response);
+    }
+
+    private String show(HttpServletRequest request) {
+        int oid = Integer.parseInt(request.getParameter("oid"));
+        String mid = (String) request.getSession().getAttribute("mid");
+        try {
+            request.setAttribute("orders", ServiceFrontFactory.getIOrdersServiceFrontInstance().show(mid, oid));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "/pages/front/orders/orders_show.jsp";
+    }
+
+    private String list(HttpServletRequest request) {
+        int currentPage = 1;
+        int lineSize = 10;
+        String column = null;
+        String keyWord = null;
+        try {
+            currentPage = Integer.parseInt(request.getParameter("cp"));
+        } catch (Exception e) {
+        }
+        try {
+            lineSize = Integer.parseInt(request.getParameter("ls"));
+        } catch (Exception e) {
+        }
+        column = request.getParameter("col");
+        keyWord = request.getParameter("kw");
+        if (column == null) {
+            column = "mid";
+        }
+        if (keyWord == null) {
+            keyWord = "";//表示查询全部
+        }
+        try {
+            String mid = (String) request.getSession().getAttribute("mid");
+            Map<String, Object> map = ServiceFrontFactory.getIOrdersServiceFrontInstance().listByMember(mid, currentPage, lineSize);
+            request.setAttribute("allOrders", map.get("allOrders"));
+            request.setAttribute("allRecorders", map.get("ordersCount"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        request.setAttribute("currentPage", currentPage);
+        request.setAttribute("lineSize", lineSize);
+        request.setAttribute("column", column);
+        request.setAttribute("keyWord", keyWord);
+        request.setAttribute("url", "/pages/front/orders/OrdersServletFront/list");
+        return "/pages/front/orders/orders_list.jsp";
     }
 
     @Override

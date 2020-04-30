@@ -87,4 +87,33 @@ public class OrdersServiceFrontImpl implements IOrdersServiceFront {
         }
         return flag;
     }
+
+    @Override
+    public Map<String,Object> listByMember(String mid, int currentPage, int lineSize) throws Exception {
+        try {
+            Map<String,Object> map=new HashMap<>();
+            map.put("allOrders",DAOFactory.getIOrdersDAOInstance(this.dbc.getConnection()).findAllByMember(mid, currentPage, lineSize));
+            map.put("ordersCount",DAOFactory.getIOrdersDAOInstance(this.dbc.getConnection()).getAllCountByMember(mid));
+            return map;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
+
+    @Override
+    public Orders show(String mid, int oid) throws Exception {
+        try {
+            Orders orders = DAOFactory.getIOrdersDAOInstance(this.dbc.getConnection()).findByIdAndMember(mid, oid);
+            if (orders != null) {
+                orders.setAllDetails(DAOFactory.getIDetailsDAOInstance(this.dbc.getConnection()).findAllByOrders(oid));
+            }
+            return orders;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.dbc.close();
+        }
+    }
 }

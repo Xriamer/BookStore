@@ -6,8 +6,9 @@
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
-    String deleteUrl = basePath + "/pages/front/cart/ShopcarServletFront/delete?p=p";
-    String updateUrl = basePath + "/pages/front/cart/ShopcarServletFront/update";
+    String deleteUrl = basePath + "pages/front/cart/ShopcarServletFront/delete?p=p";
+    String updateUrl = basePath + "pages/front/cart/ShopcarServletFront/update";
+    String ordersUrl = basePath + "pages/front/orders/OrdersServletFront/insert";
 %>
 <html>
 <head>
@@ -55,6 +56,7 @@
             <input type="button" value="删除购物车图书" onclick="deleteAll('<%=deleteUrl%>','ids','bid')">
             <input type="submit" value="更新修改图书数量">
             <span id="result"></span>
+            <a href="<%=ordersUrl%>">结算金额</a>
         </form>
     </c:if>
 </div>
