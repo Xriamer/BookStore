@@ -1,13 +1,7 @@
 package com.xriamer.store.factory;
 
-import com.xriamer.store.service.back.IAdminServiceBack;
-import com.xriamer.store.service.back.IBooksServiceBack;
-import com.xriamer.store.service.back.IItemServiceBack;
-import com.xriamer.store.service.back.IMemberServiceBack;
-import com.xriamer.store.service.back.impl.AdminServiceBackImpl;
-import com.xriamer.store.service.back.impl.BooksServiceBackImpl;
-import com.xriamer.store.service.back.impl.ItemServiceBackImpl;
-import com.xriamer.store.service.back.impl.MemberServiceBackImpl;
+import com.xriamer.store.service.back.*;
+import com.xriamer.store.service.back.impl.*;
 
 public class ServiceBackFactory {
     public static IAdminServiceBack getIAdminServiceBackInstance() {
@@ -22,6 +16,11 @@ public class ServiceBackFactory {
         return new ItemServiceBackImpl();
     }
 
-    public static IBooksServiceBack getIBookServiceBackInstance(){return new BooksServiceBackImpl();
+    public static IBooksServiceBack getIBookServiceBackInstance() {
+        return new BooksServiceBackImpl();
+    }
+
+    public static IOrdersServiceBack getIOrdersServiceBackInstance() {
+        return new OrdersServiceBackImpl();
     }
 }

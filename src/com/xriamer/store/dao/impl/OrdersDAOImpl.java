@@ -80,11 +80,11 @@ public class OrdersDAOImpl extends AbstractDAOImpl implements IOrdersDAO {
 
     @Override
     public Orders findByIdAndMember(String mid, Integer oid) throws Exception {
-        Orders orders=null;
+        Orders orders = null;
         String sql = "SELECT oid,mid,name,phone,address,credate,pay FROM orders WHERE mid=? AND oid=?";
         super.pstmt = super.conn.prepareStatement(sql);
         super.pstmt.setString(1, mid);
-        super.pstmt.setInt(2,oid);
+        super.pstmt.setInt(2, oid);
         ResultSet rs = super.pstmt.executeQuery();
         if (rs.next()) {
             orders = new Orders();
@@ -118,7 +118,24 @@ public class OrdersDAOImpl extends AbstractDAOImpl implements IOrdersDAO {
 
     @Override
     public Orders findById(Integer id) throws Exception {
-        return null;
+        Orders orders = null;
+        String sql = "SELECT oid,mid,name,phone,address,credate,pay FROM orders WHERE oid=?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setInt(1, id);
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            orders = new Orders();
+            orders.setOid(rs.getInt(1));
+            Member member = new Member();
+            member.setMid(rs.getString(2));
+            orders.setMember(member);
+            orders.setName(rs.getString(3));
+            orders.setPhone(rs.getString(4));
+            orders.setAddress(rs.getString(5));
+            orders.setCredate(rs.getTimestamp(6));
+            orders.setPay(rs.getDouble(7));
+        }
+        return orders;
     }
 
     @Override
@@ -128,11 +145,38 @@ public class OrdersDAOImpl extends AbstractDAOImpl implements IOrdersDAO {
 
     @Override
     public List<Orders> findAllSplit(Integer currentPage, Integer lineSize, String column, String keyWord) throws Exception {
-        return null;
+        List<Orders> all = new ArrayList<Orders>();
+        String sql = "SELECT oid,mid,name,phone,address,credate,pay FROM orders WHERE " + column + " LIKE ? LIMIT ?,?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%" + keyWord + "%");
+        super.pstmt.setInt(2, (currentPage - 1) * lineSize);
+        super.pstmt.setInt(3, lineSize);
+        ResultSet rs = super.pstmt.executeQuery();
+        while (rs.next()) {
+            Orders orders = new Orders();
+            orders.setOid(rs.getInt(1));
+            Member member = new Member();
+            member.setMid(rs.getString(2));
+            orders.setMember(member);
+            orders.setName(rs.getString(3));
+            orders.setPhone(rs.getString(4));
+            orders.setAddress(rs.getString(5));
+            orders.setCredate(rs.getTimestamp(6));
+            orders.setPay(rs.getDouble(7));
+            all.add(orders);
+        }
+        return all;
     }
 
     @Override
     public Integer getAllCount(String column, String keyWord) throws Exception {
-        return null;
+        String sql = "SELECT COUNT(*) FROM orders WHERE " + column + " LIKE ?";
+        super.pstmt = super.conn.prepareStatement(sql);
+        super.pstmt.setString(1, "%"+keyWord+"%");
+        ResultSet rs = super.pstmt.executeQuery();
+        if (rs.next()) {
+            return rs.getInt(1);
+        }
+        return 0;
     }
 }
