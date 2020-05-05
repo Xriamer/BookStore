@@ -34,15 +34,15 @@
             <br>
         </div>
         <c:forEach items="${allBooks}" var="books">
-            <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" width="100%">
+            <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" width="100%" style="table-layout:fixed">
                 <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                    <td rowspan="5">
+                    <td rowspan="5" width="20%" align="center" valign="middle">
                         <a href="<%=showUrl%>?bid=${books.bid}">
-                            <img src="upload/books/${books.photo}" style="width:70px;height:70px;">
+                            <img src="upload/books/${books.photo}" >
                         </a>
                     </td>
                 </tr>
-                <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
+                <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')" >
                     <td><strong>图书名称:</strong></td>
                     <td><a href="<%=showUrl%>?bid=${books.bid}">${books.title}</a></td>
                     <td><strong>作者:</strong></td>
@@ -56,7 +56,7 @@
                 </tr>
                 <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
                     <td><strong>图书价格:</strong></td>
-                    <td>${books.price}</td>
+                    <td>${books.price}元</td>
                     <td><strong>上架日期:</strong></td>
                     <td>${books.pubdate}</td>
                 </tr>

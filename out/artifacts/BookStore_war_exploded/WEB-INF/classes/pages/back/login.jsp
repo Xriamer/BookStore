@@ -106,7 +106,7 @@
                                cellspacing="0">
                             <tr>
                                 <td width="4%">&nbsp;</td>
-                                <td width="96%" height="38"><span class="login_txt_bt">管理后台登录</span></td>
+                                <td width="96%" height="38"><span class="login_txt_bt">管理员登录</span></td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>

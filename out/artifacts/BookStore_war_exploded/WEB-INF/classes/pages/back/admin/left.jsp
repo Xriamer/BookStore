@@ -208,20 +208,15 @@
                         <li><a href="<%=basePath%>pages/back/admin/books/BooksServletBack/listStatus?status=2" target="main">删除图书</a></li>
                     </ul>
                 </div>
-                <h1 class="type"><a href="javascript:void(0)">注册用户管理</a></h1>
+                <h1 class="type"><a href="javascript:void(0)">订单管理</a></h1>
                 <div class="content">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td><img src="images/menu_topline.gif" width="182" height="5"/></td>
+                            <td><img src="images/menu_topline.gif" width="182" height="5" /></td>
                         </tr>
                     </table>
                     <ul class="MM">
-                        <li><a href="#" target="main">会员管理</a></li>
-                        <li><a href="#" target="main">留言管理</a></li>
-                        <li><a href="#" target="main">回复管理</a></li>
-                        <li><a href="#" target="main">订单管理</a></li>
-                        <li><a href="#" target="main">举报管理</a></li>
-                        <li><a href="#" target="main">评论管理</a></li>
+                        <li><a href="<%=basePath%>pages/back/admin/orders/OrdersServletBack/list" target="main">全部订单</a></li>
                     </ul>
                 </div>
             </div>

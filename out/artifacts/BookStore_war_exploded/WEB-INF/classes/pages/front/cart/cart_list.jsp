@@ -38,7 +38,7 @@
                         <td><input type="checkbox" id="bid" name="bid" value="${books.bid}"></td>
                         <td><img src="upload/books/${books.photo}" style="width:50px;height:50px;"></td>
                         <td>${books.title}</td>
-                        <td><span id="price-${books.bid}">${books.price}</span></td>
+                        <td><span id="price-${books.bid}">${books.price}元</span></td>
                         <td>
                             <input type="button" value="-" onclick="subBut(${books.bid})">
                             <input type="number" value="${allCars[books.bid]}" size="5" name="${books.bid}"

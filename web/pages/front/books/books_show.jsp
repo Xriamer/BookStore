@@ -6,7 +6,7 @@
     String basePath = request.getScheme() + "://"
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
-    String addCarUrl=basePath+"pages/front/shopcar/ShopcarServletFront/insert";
+    String addCarUrl=basePath+"pages/front/cart/ShopcarServletFront/insert";
 %>
 <html>
 <head>
@@ -19,9 +19,9 @@
 <body>
 <div id="mainDiv">
     <c:if test="${books != null}">
-        <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" align="center" width="100%">
+        <table border="1" cellpadding="5" cellspacing="0" bgcolor="F2F2F2" align="center" width="100%" style="table-layout:fixed">
             <tr onmouseover="changeColor(this,'white')" onmouseout="changeColor(this,'F2F2F2')">
-                <td width="35%" rowspan="11">
+                <td width="35%" rowspan="11" width="33%" align="center" valign="middle">
                     <div id="preview">
                         <img src="upload/books/${books.photo}">
                     </div>

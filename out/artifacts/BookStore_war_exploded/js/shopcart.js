@@ -10,7 +10,7 @@ function calBooks(bid) {
    // alert("bid=" + bid + ",price=" + price + ",count=" + count);
     document.getElementById("cal-" + bid).innerHTML = "<font class='red'>" + (price * count);
     if (document.getElementById("result") != undefined) {
-        document.getElementById("result").innerHTML = "<font class='red'>总价格:" + allPrice;
+        document.getElementById("result").innerHTML = "<font class='red'>总价格:" + allPrice+"元";
     }
 
 }
